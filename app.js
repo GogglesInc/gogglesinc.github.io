@@ -5,8 +5,9 @@ const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
 const indexRouter = require('./routes/index')
-const aboutmeRouter = require('./routes/aboutme')
+const aboutRouter = require('./routes/about')
 const newsRouter = require('./routes/news')
+const githubRouter = require('./routes/github')
 
 const app = express()
 
@@ -20,8 +21,9 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
-app.use('/aboutme', aboutmeRouter)
+app.use('/about', aboutRouter)
 app.use('/news', newsRouter)
+app.use('/github', githubRouter)
 
 //keep Error Handler
 app.use(function (req, res, next) {
