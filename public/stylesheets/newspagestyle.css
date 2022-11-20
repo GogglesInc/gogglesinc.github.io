@@ -80,43 +80,6 @@ a {
   display: none;
 }
 
-#sect1 img {
-  width: 100vw;
-  height: 685px;
-}
-
-.headingtxt {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  width: 100%;
-  height: 685px;
-}
-
-.headingtxt h1 {
-  position: absolute;
-  top: 44.5%;
-  left: 20px;
-  color: #fff;
-  max-width: 40%;
-}
-
-.headingtxt button {
-  color: #000;
-  background-color: #fff;
-  outline: none;
-  font-size: 1rem;
-  border: none;
-  padding: 10px 35px 10px 35px;
-  border-radius: 8px;
-  position: absolute;
-  top: 45%;
-  right: 20px;
-}
-
-.headingtxt button:active {
-  opacity: 0.7;
-}
-
 .barafter {
   padding: 10px;
   background-color: #1c1c1c;
@@ -140,57 +103,3 @@ a {
 .barafter p #gimg {
   max-height: 20px;
 }
-
-/* Section 1 styles*/
-
-/* Section 2 styles */
-#sect2 {
-  width: 100%;
-  height: auto;
-  text-align: center;
-}
-
-#sect2 h2 {
-  padding: 40px 0px 0px 0px;
-  font-size: 2.5rem;
-  color: #23242a;
-}
-
-#sect2 p {
-  padding: 0px 0px 40px 0px;
-}
-
-.services-container-grid {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: auto auto auto;
-  padding: 30px;
-}
-
-.grid-child {
-  border: 2px solid #23242a;
-  text-align: left;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.grid-child:hover {
-  animation: hovgrid 0.3s ease-in-out forwards;
-}
-
-@keyframes hovgrid {
-  from {
-    box-shadow: 0px 0px;
-  }
-  to {
-    box-shadow: 10px 10px;
-  }
-}
-/* Section 2 styles */
-
-/* Section 3 styles */
-#sect3 {
-  width: 100%;
-  height: auto;
-}
-/* Section 3 styles */

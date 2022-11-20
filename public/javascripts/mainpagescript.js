@@ -1,5 +1,4 @@
 const upperbar = document.querySelector('.upperbar')
-upperbar.classList.toggle('barafter')
 const getstartbtn = document.querySelector('#getstart')
 getstartbtn.addEventListener('click', () => {
   window.scrollTo({
@@ -8,10 +7,15 @@ getstartbtn.addEventListener('click', () => {
   })
 })
 
-$(window).on('scroll', function () {
-  if ($(window).scrollTop() >= $(
-    '#header').offset().top + $('#header')
-    .outerHeight() - window.innerHeight) {
-    alert('You reached the end of the DIV')
+window.addEventListener('scroll', eventscroll = () => {
+  const scrollTop = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
+  let bar
+  if (scrollTop >= 640) {
+    bar = true
+  }
+  if (bar === true) {
+    upperbar.classList.add('barafter')
+  } else {
+    upperbar.classList.remove('barafter')
   }
 })
