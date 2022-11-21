@@ -62,6 +62,4 @@ typings/
 
 #eslint config
 .eslintrc.js
-
-#prettier config
-.prettierrc.json
+.eslintignore
