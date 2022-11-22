@@ -22,14 +22,6 @@
   </head>
 
   <body>
-    <!-- <header>
-      <p>
-        [Disclaimer]: All content in this website is
-        <b><u>FALSE</u></b> information. Please do not believe anything on this
-        website. This website is created by <b>Goggles</b> for his project.
-      </p>
-      <button id="disclaimer"><u>Continue to site</u></button>
-    </header> -->
     <div class="upperbar">
       <!-- Contain img and navs -->
       <p>
@@ -46,14 +38,8 @@
         <a href="/news">News</a>
         <a href="/github">Github</a>
       </nav>
-      <!-- <ion-icon name="menu-outline" id="navbtn"></ion-icon> -->
-      <button id="navbtn" class="button-one">
-        <svg
-          fill="var(--button-color)"
-          class="hamburger"
-          viewBox="0 0 100 100"
-          width="25"
-        >
+      <button class="navbtn open">
+        <svg fill="var(--button-color)" viewBox="0 0 100 100" width="25">
           <rect
             class="line top"
             width="80"
@@ -78,6 +64,25 @@
             y="65"
             rx="5"
           ></rect>
+        </svg>
+      </button>
+      <button class="navbtn close">
+        <svg
+          width="25"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="var(--button-color)"
+        >
+          <g>
+            <path
+              id="backward"
+              d="M78.2843 71.2132L28.7868 21.7157C26.8342 19.7631 23.6683 19.7631 21.7157 21.7157C19.7631 23.6684 19.7631 26.8342 21.7157 28.7868L71.2132 78.2843C73.1658 80.2369 76.3316 80.2369 78.2843 78.2843C80.2369 76.3317 80.2369 73.1658 78.2843 71.2132Z"
+            />
+            <path
+              id="forward"
+              d="M71.2132 21.7157L21.7157 71.2132C19.7631 73.1658 19.7631 76.3317 21.7157 78.2843C23.6684 80.2369 26.8342 80.2369 28.7868 78.2843L78.2843 28.7868C80.2369 26.8342 80.2369 23.6684 78.2843 21.7157C76.3317 19.7631 73.1658 19.7631 71.2132 21.7157Z"
+            />
+          </g>
         </svg>
       </button>
     </div>

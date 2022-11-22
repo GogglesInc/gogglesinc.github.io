@@ -63,6 +63,7 @@ header button:active {
   align-items: center;
   position: fixed;
   z-index: 9999;
+  transition: 1s all;
 }
 
 #gimg {
@@ -77,6 +78,7 @@ header button:active {
   gap: 20px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .upperbar nav > a {
   color: #fff;
   padding: 15px;
@@ -91,24 +93,31 @@ header button:active {
   padding: 10px;
   border-radius: 8px;
   color: #fff;
+  transition: 1s all;
 }
 
-#navbtn {
+.navbtn {
   --button-color: #fff;
   outline: none;
   border: none;
   display: none;
-  padding: 15px;
+  padding: 5px;
   border-radius: 8px;
   background-color: rgba(28, 28, 28, 0.7);
+  aspect-ratio: 1 / 1;
 }
 
-#navbtn:hover {
+.open.show {
+  display: none;
+}
+
+.close.show {
+  display: block;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .upperbar nav,
-  #navbtn {
+  .navbtn {
     -webkit-backdrop-filter: blur(510px);
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.5);
@@ -120,7 +129,7 @@ header button:active {
     background-color: rgba(255, 255, 255, 0.7);
     color: #000;
   }
-  #navbtn {
+  .navbtn {
     --button-color: #000;
   }
 }
@@ -205,7 +214,7 @@ header button:active {
   max-height: 20px;
 }
 
-.barafter #navbtn {
+.barafter .navbtn {
   padding: 0px;
   background-color: transparent;
   --button-color: #fff;
@@ -336,8 +345,11 @@ header button:active {
   .upperbar nav {
     display: none;
   }
-  #navbtn {
-    display: inherit;
+  .open {
+    display: block;
+  }
+  .close {
+    display: none;
   }
 }
 /* Media Queries */

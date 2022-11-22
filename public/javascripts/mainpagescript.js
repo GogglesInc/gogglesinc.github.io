@@ -1,7 +1,7 @@
 const upperbar = document.querySelector('.upperbar')
 const getstartbtn = document.querySelector('#getstart')
-// const disclaimerbtn = document.querySelector('#disclaimer')
-// const disclaimerscreen = document.querySelector('header')
+const navbtnham = document.querySelector('.open')
+const navbtnx = document.querySelector('.close')
 
 window.addEventListener('scroll', () => {
   const scrollTop = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
@@ -23,9 +23,15 @@ getstartbtn.addEventListener('click', () => {
   })
 })
 
-// disclaimerbtn.addEventListener('click', () => {
-//   disclaimerscreen.style.display = 'none'
-// })
+navbtnham.addEventListener('click', () => {
+  navbtnham.classList.add('show')
+  navbtnx.classList.add('show')
+})
+
+navbtnx.addEventListener('click', () => {
+  navbtnx.classList.remove('show')
+  navbtnham.classList.remove('show')
+})
 
 const services = document.querySelectorAll('.grid-child')
 
