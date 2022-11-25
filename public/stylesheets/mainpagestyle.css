@@ -260,7 +260,7 @@ header button:active {
 }
 
 #sect2 h2 {
-  padding: 40px 0px 0px 0px;
+  padding: 50px 0px 0px 0px;
   font-size: 2.5rem;
   color: #23242a;
 }
@@ -274,6 +274,7 @@ header button:active {
   gap: 25px;
   grid-template-columns: auto auto auto;
   padding: 30px;
+  padding-bottom: 50px;
 }
 
 .grid-child {
@@ -347,6 +348,14 @@ header button:active {
 #sect3 {
   width: 100%;
   height: auto;
+  background-color: #23242a;
+  color: #fff;
+}
+
+#sect3 h2 {
+  padding: 50px 0px 0px 0px;
+  font-size: 2.5rem;
+  margin-left: 20px;
 }
 
 /* Section 3 styles */
