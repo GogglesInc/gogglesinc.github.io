@@ -40,15 +40,15 @@ navbtnx.addEventListener('click', () => {
 
 const services = document.querySelectorAll('.grid-child')
 
-const observer = new IntersectionObserver(entries => {
+const globalobserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     entry.target.classList.toggle('show', entry.isIntersecting)
-    if (entry.isIntersecting) observer.unobserve(entry.target)
+    if (entry.isIntersecting) globalobserver.unobserve(entry.target)
   })
 }, {
   threshold: 0.3
 })
 
 services.forEach(service => {
-  observer.observe(service)
+  globalobserver.observe(service)
 })
