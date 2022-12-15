@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon1n.ico" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/stylesheets/errorpagestyle.css"
-    />
-    <title>Oops an error occurred</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="icon" type="image/png" href="https://gogglesinc.github.io/cdn/images/goggles-png.png" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/errorpagestyle.css" />
+		<title>Oops an error occurred</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
+		<script>
+			window.addEventListener("load", () => {
+				quicklink.listen();
+			});
+		</script>
+	</head>
 
-  <body>
-    <div class="outer">
-      <div class="box">
-        <h1>Sorry..........</h1>
-        <h1>Error: <%= error.status %> <%= message %></h1>
-        <pre><%= error.stack %></pre>
-      </div>
-    </div>
-  </body>
+	<body>
+		<div class="outer">
+			<div class="box">
+				<h1>Sorry..........</h1>
+				<h1>Error: <%= error.status %> <%= message %></h1>
+				<pre><%= error.stack %></pre>
+			</div>
+		</div>
+	</body>
 </html>

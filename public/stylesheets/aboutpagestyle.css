@@ -1,105 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  box-sizing: border-box;
-  overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 body {
-  background-color: #fff;
-  color: #000;
-  min-width: 100vw;
+	background-color: #fff;
+	color: #000;
+	min-width: 100vw;
 }
 
 a {
-  text-decoration: none;
-  color: #fff;
+	text-decoration: none;
+	color: #fff;
 }
 
 /* Section 1 styles*/
 
 .upperbar {
-  width: 100%;
-  padding: 25px 50px 5px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 9999;
+	width: 100%;
+	padding: 25px 50px 5px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 9999;
 }
 
 #gimg {
-  aspect-ratio: 1 / 1;
-  max-height: 50px;
-  border-radius: 50%;
+	aspect-ratio: 1 / 1;
+	max-height: 50px;
+	border-radius: 50%;
 }
 
 .upperbar nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .upperbar nav > a {
-  color: #fff;
-  padding: 15px;
+	color: #fff;
+	padding: 15px;
 }
 
 .upperbar p {
-  font-family: 'JetBrains Mono', monospace;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: rgba(28, 28, 28, 0.7);
-  padding: 10px;
-  border-radius: 8px;
-  color: #fff;
+	font-family: "JetBrains Mono", monospace;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background-color: rgba(28, 28, 28, 0.7);
+	padding: 10px;
+	border-radius: 8px;
+	color: #fff;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-  .upperbar nav {
-    -webkit-backdrop-filter: blur(510px);
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  .upperbar nav > a {
-    color: #000;
-  }
-  .upperbar p {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #000;
-  }
+	.upperbar nav {
+		-webkit-backdrop-filter: blur(510px);
+		backdrop-filter: blur(5px);
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+	.upperbar nav > a {
+		color: #000;
+	}
+	.upperbar p {
+		background-color: rgba(255, 255, 255, 0.7);
+		color: #000;
+	}
 }
 
 #navbtn {
-  font-size: 1.5rem;
-  display: none;
+	font-size: 1.5rem;
+	display: none;
 }
 
 .barafter {
-  padding: 10px;
-  background-color: #1c1c1c;
+	padding: 10px;
+	background-color: #1c1c1c;
 }
 
 .barafter nav {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .barafter nav > a {
-  padding: 0px;
-  color: #fff;
+	padding: 0px;
+	color: #fff;
 }
 
 .barafter p {
-  background-color: transparent;
-  padding: 0px;
-  color: #fff;
+	background-color: transparent;
+	padding: 0px;
+	color: #fff;
 }
 
 .barafter p #gimg {
-  max-height: 20px;
+	max-height: 20px;
 }
