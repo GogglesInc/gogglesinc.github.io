@@ -14,6 +14,7 @@ module.exports = {
 	rules: {
 		'spaced-comment': 'off',
 		'no-tabs': ['error', { allowIndentationTabs: true }],
-		indent: ['error', 'tab']
+		indent: ['error', 'tab'],
+		semi: ['error', 'always']
 	}
-}
+};
