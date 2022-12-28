@@ -5,8 +5,43 @@
 			"type": "npm",
 			"script": "start",
 			"problemMatcher": [],
-			"label": "npm: start",
-			"detail": "SET DEBUG=responsive-web-design:* & node ./bin/www"
+			"label": "express: start",
+			"detail": "Start Server"
+		},
+		{
+			"type": "npm",
+			"script": "css:minify",
+			"problemMatcher": [],
+			"label": "postcss: minify",
+			"detail": "Minify CSS"
+		},
+		{
+			"type": "npm",
+			"script": "css:minify:watch",
+			"problemMatcher": [],
+			"label": "postcss: minify --watch",
+			"detail": "Minify CSS --watch"
+		},
+		{
+			"type": "npm",
+			"script": "js:minify",
+			"problemMatcher": [],
+			"label": "babel: minify",
+			"detail": "Minify JS"
+		},
+		{
+			"type": "npm",
+			"script": "js:minify:watch",
+			"problemMatcher": [],
+			"label": "babel: minify --watch",
+			"detail": "Minify JS --watch"
+		},
+		{
+			"type": "npm",
+			"script": "lighthouse:test",
+			"problemMatcher": [],
+			"label": "lighthouse: performance test",
+			"detail": "npx lighthouse http://localhost:6969 --save-assets=true --preset=desktop --output=[\"json\"] --output-path=./performance/reports/lighthouseresult.json"
 		}
 	]
 }

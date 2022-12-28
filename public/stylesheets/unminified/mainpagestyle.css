@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 *,
@@ -61,18 +61,7 @@ header p > a {
 header p > span {
 	text-decoration: underline;
 	color: red;
-	font-weight: bold;
-}
-
-header span > input {
-	margin-right: 5px;
-}
-
-header > span:nth-child(2) {
-	margin-top: 10px;
-	margin-left: 25px;
-	margin-right: 25px;
-	text-align: center;
+	font-weight: 700;
 }
 
 header button {
@@ -81,7 +70,7 @@ header button {
 	padding: 10px;
 	margin-top: 10px;
 	border-radius: 8px;
-	background-color: #00ff00;
+	background-color: #008000;
 	color: white;
 }
 
@@ -105,8 +94,8 @@ header button:active {
 }
 
 #gimg {
-	aspect-ratio: 1 / 1;
 	max-height: 50px;
+	max-width: 50px;
 	border-radius: 50%;
 }
 
@@ -266,6 +255,7 @@ header button:active {
 #sect1 img {
 	width: 100vw;
 	height: 685px;
+	object-fit: cover;
 }
 
 .headingtxt {
@@ -418,7 +408,7 @@ header button:active {
 	transition: 0.75s all;
 }
 
-.partner-child > img {
+.partner-child img {
 	max-height: 45px;
 	width: 100%;
 }
@@ -436,7 +426,7 @@ header button:active {
 }
 
 .partner-child:hover {
-	transform: scale(1.05);
+	transform: scale(1.03);
 	background-color: #1c1c1c;
 }
 
@@ -530,3 +520,31 @@ header button:active {
 	}
 }
 /** END Media Queries */
+
+/** Footer */
+footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	background-color: #000;
+	padding: 7.5px;
+	color: #fff;
+	pointer-events: none;
+}
+
+footer p {
+	font-family: "JetBrains Mono", monospace;
+	font-size: 0.875rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+footer img {
+	height: 30px;
+	margin-right: 20px;
+	margin-left: 10px;
+	pointer-events: none;
+}
