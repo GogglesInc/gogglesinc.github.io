@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!--* Meta tags -->
+		<!--* Metadatas -->
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,33 +9,14 @@
 		<meta name="description" content="GogglesInc - The most hybrid and tech stacked company you can ever imagine" />
 		<meta property="og:title" content="Home - GogglesInc" />
 		<meta property="og:description" content="GogglesInc - The most hybrid and tech stacked company you can ever imagine" />
-		<meta property="og:image" content="https://gogglesinc.github.io/cdn/images/goggles-png.png" />
+		<meta property="og:image" content="https://gogglesinc.github.io/cdn/images/goggles-small.png" />
 		<meta property="og:url" content="/index.html" />
 		<meta property="og:site_name" content="GogglesInc" />
 		<meta name="twitter:card" content="" />
 		<meta name="twitter:image:alt" content="" />
-		<!--* Link tags -->
-		<link rel="stylesheet" type="text/css" href="/stylesheets/mainpagestyle.css" />
-		<link rel="icon" type="image/png" href="https://gogglesinc.github.io/cdn/images/goggles-png.png" />
-		<!--* Script tags -->
-		<script defer src="/javascripts/mainpagescript.js"></script>
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
-		<script>
-			window.addEventListener("load", () => {
-				const allCookies = document.cookie
-					.split(";")
-					.map((cookie) => cookie.split("="))
-					.reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
-				if (allCookies.keepdisclaimer === "false") {
-					document.querySelector("header").classList.remove("show");
-				} else {
-					document.querySelector("header").classList.add("show");
-				}
-				quicklink.listen();
-			});
-		</script>
+		<!--* Links -->
+		<link rel="stylesheet" type="text/css" href="/static/stylesheets/minified/mainpagestyle.min.css" />
+		<link rel="icon" type="image/png" href="https://gogglesinc.github.io/cdn/images/goggles-small.png" />
 		<!--* Title -->
 		<title>Home | GogglesInc</title>
 	</head>
@@ -44,26 +25,29 @@
 		<!--complete Disclaimer Heading -->
 		<header>
 			<p>[Disclaimer]: All contents in this website are <span>NOT TRUE</span>. Please continue without belief. Contact <a href="https://github.com/someguy403">@Goggles</a> for more informations</p>
-			<span> <input type="checkbox" name="disclaimercheckbox" />Do not show this again</span>
+			<label>
+				Do not show this again
+				<input type="checkbox" name="disclaimercheckbox" id="disclaimercheckbox" />
+			</label>
 			<button id="disclaimerbtn">Continue to site</button>
 		</header>
 		<!--complete Navigation Bar -->
 		<aside class="upperbar">
-			<p><img src="https://gogglesinc.github.io/cdn/images/goggles-png.png" alt="" title="GogglesInc" id="gimg" />GogglesInc</p>
+			<p><img src="https://gogglesinc.github.io/cdn/images/goggles-small.png" alt="" title="GogglesInc" id="gimg" />GogglesInc</p>
 			<nav class="desktopnavbar">
 				<a href="/home">Home</a>
 				<a href="/about">About</a>
 				<a href="/news">News</a>
 				<a href="/github">Github</a>
 			</nav>
-			<button class="navbtn open">
+			<button aria-label="Navigation Button" class="navbtn open">
 				<svg fill="var(--button-color)" viewBox="0 0 100 100" width="25">
 					<rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
 					<rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
 					<rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
 				</svg>
 			</button>
-			<button class="navbtn close">
+			<button aria-label="Navigation Button" class="navbtn close">
 				<svg width="25" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="var(--button-color)">
 					<g>
 						<path
@@ -93,7 +77,7 @@
 					<h1>"The most hybrid and tech stacked company you can ever imagine"</h1>
 					<button id="getstart">Get started</button>
 				</div>
-				<img src="https://gogglesinc.github.io/cdn/images/rwd/headerimg.jpg" alt="" />
+				<img src="https://gogglesinc.github.io/cdn/images/rwd/headerimg.webp" alt="" />
 			</section>
 			<!--complete Why Choose GogglesInc  -->
 			<section id="sect2">
@@ -180,6 +164,13 @@
 			<!--todo Section 4: Unamed -->
 			<section id="sect4"></section>
 		</main>
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<footer>
+			<p>Created by <img src="/static/images/goggles-autograph-animated.svg" alt="Signature" /></p>
+		</footer>
+		<!--* Scripts  -->
+		<script defer src="/static/javascripts/minified/mainpagescript.min.js"></script>
+		<script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>
 </html>

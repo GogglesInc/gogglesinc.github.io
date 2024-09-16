@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const serveIndex = require('serve-index');
 //! [Core Modules] -- Do not Delete
 
 //*  [Routers & Redirect Routers] imports
@@ -12,6 +13,7 @@ const aboutRouter = require('./routes/about');
 const newsRouter = require('./routes/news');
 const githubRedirectRouter = require('./routes/github');
 const homeRedirectRouter = require('./routes/home');
+const apiRouter = require('./routes/api');
 //*  [Routers & Redirect Routers] imports
 
 const app = express();
@@ -25,7 +27,9 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'root-static')));
+app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/performance', express.static(path.join(__dirname, 'performance')), serveIndex(path.join(__dirname, 'performance'), { icons: true }));
 
 //* Use [Routers & Redirect Routers]
 app.use('/', indexRouter);
@@ -33,6 +37,7 @@ app.use('/about', aboutRouter);
 app.use('/news', newsRouter);
 app.use('/github', githubRedirectRouter);
 app.use('/home', homeRedirectRouter);
+app.use('/api', apiRouter);
 //* Use [Routers & Redirect Routers]
 
 //! [Error Handler] -- Do not Delete

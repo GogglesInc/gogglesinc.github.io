@@ -1,0 +1,24 @@
+{
+	"presets": [
+		[
+			"minify",
+			{
+				"tdz": true,
+				"keepFnName": true,
+				"keepClassName": true,
+				"consecutiveAdds": false,
+				"evaluate": false,
+				"flipComparisons": false,
+				"guards": false,
+				"removeConsole": {
+					"exclude": ["error", "warn"]
+				},
+				"removeDebugger": true,
+				"replace": false,
+				"simplifyComparisons": false,
+				"mergeVars": false
+			}
+		],
+		"@babel/preset-env"
+	]
+}

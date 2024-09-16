@@ -4,23 +4,17 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<link rel="icon" type="image/png" href="https://gogglesinc.github.io/cdn/images/goggles-png.png" />
-		<link rel="stylesheet" type="text/css" href="/stylesheets/errorpagestyle.css" />
+		<link rel="stylesheet" type="text/css" href="/static/stylesheets/minified/errorpagestyle.min.css" />
 		<title><%= error.status %> Error! | GogglesInc</title>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
-		<script>
-			window.addEventListener("load", () => {
-				quicklink.listen();
-			});
-		</script>
 	</head>
 
 	<body>
-		<div class="outer">
-			<div class="box">
+		<main class="outer">
+			<section class="box">
 				<h1>Sorry..........</h1>
 				<h1>Error: <%= error.status %> <%= message %></h1>
 				<pre><%= error.stack %></pre>
-			</div>
-		</div>
+			</section>
+		</main>
 	</body>
 </html>
