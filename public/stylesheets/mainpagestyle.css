@@ -350,12 +350,29 @@ header button:active {
   height: auto;
   background-color: #23242a;
   color: #fff;
+  text-align: center;
 }
 
 #sect3 h2 {
   padding: 50px 0px 0px 0px;
   font-size: 2.5rem;
-  margin-left: 20px;
+}
+
+.partners-container-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 25px;
+  width: 100%;
+}
+
+.partner-grid-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  font-size: 1.75rem;
+  flex-direction: column;
 }
 
 /* Section 3 styles */
@@ -403,6 +420,18 @@ header button:active {
 
   .close {
     display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .partners-container-grid {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 595px) {
+  .partners-container-grid {
+    grid-template-columns: auto;
   }
 }
 
