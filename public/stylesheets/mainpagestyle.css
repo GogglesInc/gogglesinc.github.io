@@ -103,14 +103,21 @@ header button:active {
   display: flex;
   flex-direction: column;
   padding: min(20vh, 160px) 32px;
-  gap: 15px;
+  gap: min(10px, 15px);
   background-color: rgba(28, 28, 28, 0.9);
   transform: translateX(100%);
   transition: 1s all;
 }
 
+.mobilenavbar p {
+  position: absolute;
+  bottom: 5px;
+  font-size: 12px;
+}
+
 .mobilenavbar a {
-  padding: 3px;
+  overflow: hidden;
+  padding: min(0, 3px);
 }
 
 .mobilenavbar a:nth-child(1) {
@@ -148,14 +155,17 @@ header button:active {
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.5);
   }
+
   .upperbar nav > a,
   .mobilenavbar a {
     color: #000;
   }
+
   .upperbar p {
     background-color: rgba(255, 255, 255, 0.7);
     color: #000;
   }
+
   .navbtn {
     --button-color: #000;
   }
@@ -197,26 +207,6 @@ header button:active {
   opacity: 0.7;
 }
 
-#scrolldown {
-  position: absolute;
-  z-index: 10;
-  top: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  animation: updown 1s infinite alternate;
-}
-
-@keyframes updown {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(10px);
-  }
-}
-
 .barafter {
   padding: 10px;
   background-color: #1c1c1c;
@@ -248,7 +238,7 @@ header button:active {
 }
 
 .barafter.mobilenavbar {
-  inset: 0 0 0 70%;
+  inset: 0 0 0 30%;
 }
 
 .barafter.mobilenavbar a {
@@ -294,11 +284,18 @@ header button:active {
   transform: translateX(-100px);
   opacity: 0;
   transition: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .grid-child.show {
   transform: translateX(0);
   opacity: 1;
+}
+
+#sect2 .grid-child p {
+  padding: 0px;
 }
 
 .grid-child h3 {
@@ -311,13 +308,14 @@ header button:active {
 }
 
 .grid-child:hover {
-  animation: hovgrid 0.2s ease-in-out forwards alternate;
+  animation: hovgrid 0.2s forwards;
 }
 
 @keyframes hovgrid {
   from {
     box-shadow: 0px 0px;
   }
+
   to {
     box-shadow: 10px 10px;
   }
@@ -342,6 +340,7 @@ header button:active {
 .collaborator {
   transition-delay: 900ms;
 }
+
 /* Section 2 styles */
 
 /* Section 3 styles */
@@ -349,6 +348,7 @@ header button:active {
   width: 100%;
   height: auto;
 }
+
 /* Section 3 styles */
 
 /* Media Queries */
@@ -376,20 +376,25 @@ header button:active {
     align-items: flex-start;
     justify-content: center;
   }
+
   .headingtxt button {
     margin-right: 0px;
     margin-left: 20px;
   }
 }
+
 @media (max-width: 690px) {
   .upperbar .desktopnavbar {
     display: none;
   }
+
   .open {
     display: block;
   }
+
   .close {
     display: none;
   }
 }
+
 /* Media Queries */
