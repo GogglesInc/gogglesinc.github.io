@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!--* Meta tags -->
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Goggles" />
+		<meta name="description" content="GogglesInc - The most hybrid and tech stacked company you can ever imagine" />
+		<meta property="og:title" content="Home - GogglesInc" />
+		<meta property="og:description" content="GogglesInc - The most hybrid and tech stacked company you can ever imagine" />
+		<meta property="og:image" content="https://gogglesinc.github.io/cdn/images/goggles-png.png" />
+		<meta property="og:url" content="/index.html" />
+		<meta property="og:site_name" content="GogglesInc" />
+		<meta name="twitter:card" content="" />
+		<meta name="twitter:image:alt" content="" />
+		<!--* Link tags -->
 		<link rel="stylesheet" type="text/css" href="/stylesheets/mainpagestyle.css" />
 		<link rel="icon" type="image/png" href="https://gogglesinc.github.io/cdn/images/goggles-png.png" />
+		<!--* Script tags -->
 		<script defer src="/javascripts/mainpagescript.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-		<title>Home | GogglesInc</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
 		<script>
 			window.addEventListener("load", () => {
+				const allCookies = document.cookie
+					.split(";")
+					.map((cookie) => cookie.split("="))
+					.reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+				if (allCookies.keepdisclaimer === "false") {
+					document.querySelector("header").classList.remove("show");
+				} else {
+					document.querySelector("header").classList.add("show");
+				}
 				quicklink.listen();
 			});
 		</script>
+		<!--* Title -->
+		<title>Home | GogglesInc</title>
 	</head>
 
 	<body>
+		<!--complete Disclaimer Heading -->
+		<header>
+			<p>[Disclaimer]: All contents in this website are <span>NOT TRUE</span>. Please continue without belief. Contact <a href="https://github.com/someguy403">@Goggles</a> for more informations</p>
+			<span> <input type="checkbox" name="disclaimercheckbox" />Do not show this again</span>
+			<button id="disclaimerbtn">Continue to site</button>
+		</header>
+		<!--complete Navigation Bar -->
 		<aside class="upperbar">
-			<!-- Contain img and navs -->
 			<p><img src="https://gogglesinc.github.io/cdn/images/goggles-png.png" alt="" title="GogglesInc" id="gimg" />GogglesInc</p>
 			<nav class="desktopnavbar">
-				<a href="/">Home</a>
+				<a href="/home">Home</a>
 				<a href="/about">About</a>
 				<a href="/news">News</a>
 				<a href="/github">Github</a>
@@ -49,21 +78,24 @@
 				</svg>
 			</button>
 			<nav class="mobilenavbar">
-				<a href="/">Home</a>
+				<a href="/home">Home</a>
 				<a href="/about">About</a>
 				<a href="/news">News</a>
 				<a href="/github">Github</a>
 				<p>Made by @Goggles</p>
 			</nav>
 		</aside>
+		<!--complete Main Content -->
 		<main>
+			<!--complete Welcome -->
 			<section id="sect1">
 				<div class="headingtxt">
-					<h1>"The most hybrid tech stacked company you can ever imagine"</h1>
+					<h1>"The most hybrid and tech stacked company you can ever imagine"</h1>
 					<button id="getstart">Get started</button>
 				</div>
 				<img src="https://gogglesinc.github.io/cdn/images/rwd/headerimg.jpg" alt="" />
 			</section>
+			<!--complete Why Choose GogglesInc  -->
 			<section id="sect2">
 				<h2>Why choose GogglesInc ?</h2>
 				<p>We provide you with several sevices and access for free !</p>
@@ -105,34 +137,48 @@
 					</div>
 				</div>
 			</section>
+			<!--complete Partners -->
 			<section id="sect3">
-				<h2>Trusted by tech companies</h2>
+				<h2>Trusted by companies</h2>
 				<p>Meet our partners</p>
 				<div class="partners-grid">
 					<div class="partner-child google">
-						<img src="/images/google.svg" alt="Google" />
+						<img src="https://gogglesinc.github.io/cdn/images/rwd/google.svg" alt="Google" />
 						<p>
 							Google LLC is an technology company focusing on online advertising, cloud computing, computer software, quantum computing.
 							<a href="https://en.wikipedia.org/wiki/Google">Learn more</a>
 						</p>
 					</div>
 					<div class="partner-child microsoft">
-						<img src="/images/microsoft.svg" alt="Microsoft" />
+						<img src="https://gogglesinc.github.io/cdn/images/rwd/microsoft.svg" alt="Microsoft" />
 						<p>
 							Microsoft Corporation is an technology corporation producing computer software, consumer electronics, personal computers.
 							<a href="https://en.wikipedia.org/wiki/Microsoft">Learn more</a>
 						</p>
 					</div>
 					<div class="partner-child amazon">
-						<img src="/images/amazon.svg" alt="Amazon" />
+						<img src="https://gogglesinc.github.io/cdn/images/rwd/amazon.svg" alt="Amazon" />
 						<p>
 							Amazon.com, Inc. is an technology company focusing on cloud computing, digital streaming, and artificial intelligence.
 							<a href="https://en.wikipedia.org/wiki/Amazon_(company)">Learn more</a>
 						</p>
 					</div>
 				</div>
-				<p>and a lot more!...</p>
+				<p>You may know their products</p>
+				<div class="partnerproducts">
+					<a href="https://aws.amazon.com/"> <img src="https://gogglesinc.github.io/cdn/images/rwd/aws-icon.svg" alt="Amazon Web Service" /> </a>
+					<a href="https://aws.amazon.com/amplify/"> <img src="https://gogglesinc.github.io/cdn/images/rwd/awsamplify-icon.svg" alt="Amazon Web Service Amplify" /> </a>
+					<a href="https://azure.microsoft.com/en-us/"> <img src="https://gogglesinc.github.io/cdn/images/rwd/azure-icon.svg" alt="Microsoft Azure" /> </a>
+					<a href="https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview">
+						<img src="https://gogglesinc.github.io/cdn/images/rwd/azworkbook-icon.svg" alt="Microsoft Azure Workbook" />
+					</a>
+					<a href="https://firebase.google.com/"> <img src="https://gogglesinc.github.io/cdn/images/rwd/firebase-icon.svg" alt="Google Firebase" /> </a>
+					<a href="https://analytics.google.com/analytics/web/"> <img src="https://gogglesinc.github.io/cdn/images/rwd/ganalytics-icon.svg" alt="Google Analytics" /> </a>
+					<a href="https://cloud.google.com/"> <img src="https://gogglesinc.github.io/cdn/images/rwd/gcloud-icon.svg" alt="Google Cloud" /> </a>
+				</div>
 			</section>
+			<!--todo Section 4: Unamed -->
+			<section id="sect4"></section>
 		</main>
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 	</body>
