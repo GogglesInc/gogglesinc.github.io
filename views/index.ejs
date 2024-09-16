@@ -1,249 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/stylesheets/mainpagestyle.css"
-    />
-    <link rel="icon" type="image/x-icon" href="/images/favicon1n.ico" />
-    <script defer src="/javascripts/mainpagescript.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/d8b80da8d7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <title>GogglesInc - Home</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/mainpagestyle.css" />
+		<link rel="icon" type="image/png" href="https://gogglesinc.github.io/cdn/images/goggles-png.png" />
+		<script defer src="/javascripts/mainpagescript.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<title>Home | GogglesInc</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
+		<script>
+			window.addEventListener("load", () => {
+				quicklink.listen();
+			});
+		</script>
+	</head>
 
-  <body>
-    <div class="upperbar">
-      <!-- Contain img and navs -->
-      <p>
-        <img
-          src="/images/goggles.jpg"
-          alt=""
-          title="Goggles"
-          id="gimg"
-        />GogglesInc
-      </p>
-      <nav class="desktopnavbar">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/news">News</a>
-        <a href="/github">Github</a>
-      </nav>
-      <button class="navbtn open">
-        <svg fill="var(--button-color)" viewBox="0 0 100 100" width="25">
-          <rect
-            class="line top"
-            width="80"
-            height="10"
-            x="10"
-            y="25"
-            rx="5"
-          ></rect>
-          <rect
-            class="line middle"
-            width="80"
-            height="10"
-            x="10"
-            y="45"
-            rx="5"
-          ></rect>
-          <rect
-            class="line bottom"
-            width="80"
-            height="10"
-            x="10"
-            y="65"
-            rx="5"
-          ></rect>
-        </svg>
-      </button>
-      <button class="navbtn close">
-        <svg
-          width="25"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="var(--button-color)"
-        >
-          <g>
-            <path
-              id="backward"
-              d="M78.2843 71.2132L28.7868 21.7157C26.8342 19.7631 23.6683 19.7631 21.7157 21.7157C19.7631 23.6684 19.7631 26.8342 21.7157 28.7868L71.2132 78.2843C73.1658 80.2369 76.3316 80.2369 78.2843 78.2843C80.2369 76.3317 80.2369 73.1658 78.2843 71.2132Z"
-            />
-            <path
-              id="forward"
-              d="M71.2132 21.7157L21.7157 71.2132C19.7631 73.1658 19.7631 76.3317 21.7157 78.2843C23.6684 80.2369 26.8342 80.2369 28.7868 78.2843L78.2843 28.7868C80.2369 26.8342 80.2369 23.6684 78.2843 21.7157C76.3317 19.7631 73.1658 19.7631 71.2132 21.7157Z"
-            />
-          </g>
-        </svg>
-      </button>
-    </div>
-    <nav class="mobilenavbar">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/news">News</a>
-      <a href="/github">Github</a>
-      <p>Made by @Goggles</p>
-    </nav>
-    <main>
-      <section id="sect1">
-        <div class="headingtxt">
-          <h1>"The most hybrid tech stacked company you can ever imagine"</h1>
-          <button id="getstart">Get started</button>
-        </div>
-        <img src="/images/headerimg.jpg" alt="" />
-      </section>
-      <section id="sect2">
-        <h2>Why choose GogglesInc ?</h2>
-        <p>We provide you with several sevices and access for free !</p>
-        <div class="services-container-grid">
-          <div class="grid-child cloud">
-            <h3>Cloud Provider <ion-icon name="cloud-outline"></ion-icon></h3>
-            <hr />
-            <p>
-              With our trusted partners, we created a hybrid tech stack (Google
-              Cloud Platform, Microsoft Azure, Amazon Web Service,...) to
-              provide you with the best "Cloud Computing" experience.
-            </p>
-          </div>
-          <div class="grid-child hosting">
-            <h3>Web Hosting <ion-icon name="layers-outline"></ion-icon></h3>
-            <hr />
-            <p>
-              As a services provider, we can help you create any type of website
-              (on any framework) with just a click of a mouse, and your website
-              will be live and hosted on our powerful server.
-            </p>
-          </div>
-          <div class="grid-child database">
-            <h3>Database <ion-icon name="server-outline"></ion-icon></h3>
-            <hr />
-            <p>
-              Every website or application needs a database to store its
-              information, therefore we have thought of this and provide
-              database services managed with MongoDB, MySQL, and PostgreSQL,...
-            </p>
-          </div>
-          <div class="grid-child network">
-            <h3>Networking <ion-icon name="git-network-outline"></ion-icon></h3>
-            <hr />
-            <p>
-              We also provide you with a custom, multifunctional, hybrid,
-              powerful network management system to handle your domains, Domain
-              Name System (DNS), and email services,...
-            </p>
-          </div>
-          <div class="grid-child dataana">
-            <h3>
-              Data Analytics <ion-icon name="analytics-outline"></ion-icon>
-            </h3>
-            <hr />
-            <p>
-              Using our services we provide analytics reports and insightful
-              feedback and statistics on your website and give suggestions to
-              grow your website better and beyond!
-            </p>
-          </div>
-          <div class="grid-child collaborator">
-            <h3>
-              Extensive Collaborator <ion-icon name="people-outline"></ion-icon>
-            </h3>
-            <hr />
-            <p>
-              To maintain our ecosystem and provide you with all of those
-              services, we partnered with big tech companies, and cloud
-              providers,... to preserve you - our worthy customers for the long
-              haul.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section id="sect3">
-        <h2>Our trusted Partners</h2>
-        <div class="partners-container-grid">
-          <div class="partner-grid-child google">
-            <img
-              src="/images/goog-icon.svg"
-              alt="Google"
-              title="Google"
-              id="partnicon"
-            />
-            <p>Google</p>
-            <div class="google-products-container-grid">
-              <div class="container-child">
-                <img src="/images/gcloud-icon.svg" alt="Google Cloud" />
-                <p>Google Cloud Platform</p>
-              </div>
-              <div class="container-child">
-                <img src="/images/gdomain-icon.svg" alt="Google Domains" />
-                <p>Google Domains</p>
-              </div>
-              <div class="container-child">
-                <img src="/images/ganalytics-icon.svg" alt="Google Analytics" />
-                <p>Google Analytics</p>
-              </div>
-              <div class="container-child">
-                <img src="/images/firebase-icon.svg" alt="Firebase" />
-                <p>Firebase</p>
-              </div>
-              And many more!...
-            </div>
-          </div>
-          <div class="partner-grid-child microsoft">
-            <img
-              src="/images/micr-icon.svg"
-              alt="Microsoft"
-              title="Microsoft"
-              id="partnicon"
-            />
-            <p>Microsoft</p>
-            <div class="microsoft-products-container-grid">
-              <img src="/images/azure-icon.svg" alt="Microsoft Azure" />
-              <img
-                src="/images/azdevops-icon.svg"
-                alt="Microsoft Azure DevOps"
-              />
-              <img src="/images/azsql-icon.svg" alt="Microsoft Azure SQL" />
-              <img
-                src="/images/azworkbook-icon.svg"
-                alt="Microsoft Azure Workbook"
-              />
-            </div>
-          </div>
-          <div class="partner-grid-child amazon">
-            <img
-              src="/images/amaz-icon.svg"
-              alt="Amazon"
-              title="Amazon"
-              id="partnicon"
-            />
-            <p>Amazon</p>
-            <div class="amazon-products-container-grid">
-              <img src="/images/aws-icon.svg" alt="Amazon Web Service" />
-              <img
-                src="/images/awsamplify-icon.svg"
-                alt="Amazon Web Service Amplify"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
+	<body>
+		<aside class="upperbar">
+			<!-- Contain img and navs -->
+			<p><img src="https://gogglesinc.github.io/cdn/images/goggles-png.png" alt="" title="GogglesInc" id="gimg" />GogglesInc</p>
+			<nav class="desktopnavbar">
+				<a href="/">Home</a>
+				<a href="/about">About</a>
+				<a href="/news">News</a>
+				<a href="/github">Github</a>
+			</nav>
+			<button class="navbtn open">
+				<svg fill="var(--button-color)" viewBox="0 0 100 100" width="25">
+					<rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
+					<rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
+					<rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
+				</svg>
+			</button>
+			<button class="navbtn close">
+				<svg width="25" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="var(--button-color)">
+					<g>
+						<path
+							id="backward"
+							d="M78.2843 71.2132L28.7868 21.7157C26.8342 19.7631 23.6683 19.7631 21.7157 21.7157C19.7631 23.6684 19.7631 26.8342 21.7157 28.7868L71.2132 78.2843C73.1658 80.2369 76.3316 80.2369 78.2843 78.2843C80.2369 76.3317 80.2369 73.1658 78.2843 71.2132Z"
+						/>
+						<path
+							id="forward"
+							d="M71.2132 21.7157L21.7157 71.2132C19.7631 73.1658 19.7631 76.3317 21.7157 78.2843C23.6684 80.2369 26.8342 80.2369 28.7868 78.2843L78.2843 28.7868C80.2369 26.8342 80.2369 23.6684 78.2843 21.7157C76.3317 19.7631 73.1658 19.7631 71.2132 21.7157Z"
+						/>
+					</g>
+				</svg>
+			</button>
+			<nav class="mobilenavbar">
+				<a href="/">Home</a>
+				<a href="/about">About</a>
+				<a href="/news">News</a>
+				<a href="/github">Github</a>
+				<p>Made by @Goggles</p>
+			</nav>
+		</aside>
+		<main>
+			<section id="sect1">
+				<div class="headingtxt">
+					<h1>"The most hybrid tech stacked company you can ever imagine"</h1>
+					<button id="getstart">Get started</button>
+				</div>
+				<img src="https://gogglesinc.github.io/cdn/images/rwd/headerimg.jpg" alt="" />
+			</section>
+			<section id="sect2">
+				<h2>Why choose GogglesInc ?</h2>
+				<p>We provide you with several sevices and access for free !</p>
+				<div class="services-container-grid">
+					<div class="grid-child cloud">
+						<h3>Cloud Provider <ion-icon name="cloud-outline"></ion-icon></h3>
+						<hr />
+						<p>With our trusted partners, we created a hybrid tech stack (Google Cloud Platform, Microsoft Azure, Amazon Web Service,...) to provide you with the best "Cloud Computing" experience.</p>
+					</div>
+					<div class="grid-child hosting">
+						<h3>Web Hosting <ion-icon name="layers-outline"></ion-icon></h3>
+						<hr />
+						<p>As a services provider, we can help you create any type of website (on any framework) with just a click of a mouse, and your website will be live and hosted on our powerful server.</p>
+					</div>
+					<div class="grid-child database">
+						<h3>Database <ion-icon name="server-outline"></ion-icon></h3>
+						<hr />
+						<p>
+							Every website or application needs a database to store its information, therefore we have thought of this and provide database services managed with MongoDB, MySQL, and PostgreSQL,...
+						</p>
+					</div>
+					<div class="grid-child network">
+						<h3>Networking <ion-icon name="git-network-outline"></ion-icon></h3>
+						<hr />
+						<p>We also provide you with a custom, multifunctional, hybrid, powerful network management system to handle your domains, Domain Name System (DNS), and email services,...</p>
+					</div>
+					<div class="grid-child dataana">
+						<h3>Data Analytics <ion-icon name="analytics-outline"></ion-icon></h3>
+						<hr />
+						<p>Using our services we provide analytics reports and insightful feedback and statistics on your website and give suggestions to grow your website better and beyond!</p>
+					</div>
+					<div class="grid-child collaborator">
+						<h3>Extensive Collaborator <ion-icon name="people-outline"></ion-icon></h3>
+						<hr />
+						<p>
+							To maintain our ecosystem and provide you with all of those services, we partnered with big tech companies, and cloud providers,... to preserve you - our worthy customers for the long
+							haul.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section id="sect3">
+				<h2>Trusted by tech companies</h2>
+				<p>Meet our partners</p>
+				<div class="partners-grid">
+					<div class="partner-child google">
+						<img src="/images/google.svg" alt="Google" />
+						<p>
+							Google LLC is an technology company focusing on online advertising, cloud computing, computer software, quantum computing.
+							<a href="https://en.wikipedia.org/wiki/Google">Learn more</a>
+						</p>
+					</div>
+					<div class="partner-child microsoft">
+						<img src="/images/microsoft.svg" alt="Microsoft" />
+						<p>
+							Microsoft Corporation is an technology corporation producing computer software, consumer electronics, personal computers.
+							<a href="https://en.wikipedia.org/wiki/Microsoft">Learn more</a>
+						</p>
+					</div>
+					<div class="partner-child amazon">
+						<img src="/images/amazon.svg" alt="Amazon" />
+						<p>
+							Amazon.com, Inc. is an technology company focusing on cloud computing, digital streaming, and artificial intelligence.
+							<a href="https://en.wikipedia.org/wiki/Amazon_(company)">Learn more</a>
+						</p>
+					</div>
+				</div>
+				<p>and a lot more!...</p>
+			</section>
+		</main>
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	</body>
 </html>
