@@ -96,6 +96,31 @@ header button:active {
   transition: 1s all;
 }
 
+.mobilenavbar {
+  position: fixed;
+  z-index: 10;
+  inset: 0 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  padding: min(20vh, 160px) 32px;
+  gap: 15px;
+  background-color: rgba(28, 28, 28, 0.9);
+  transform: translateX(100%);
+  transition: 1s all;
+}
+
+.mobilenavbar a {
+  padding: 3px;
+}
+
+.mobilenavbar a:nth-child(1) {
+  margin-top: 25px;
+}
+
+.mobilenavbar.show {
+  transform: translateX(0%);
+}
+
 .navbtn {
   --button-color: #fff;
   outline: none;
@@ -117,12 +142,14 @@ header button:active {
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .upperbar nav,
-  .navbtn {
+  .navbtn,
+  .mobilenavbar {
     -webkit-backdrop-filter: blur(510px);
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.5);
   }
-  .upperbar nav > a {
+  .upperbar nav > a,
+  .mobilenavbar a {
     color: #000;
   }
   .upperbar p {
@@ -218,6 +245,19 @@ header button:active {
   padding: 0px;
   background-color: transparent;
   --button-color: #fff;
+}
+
+.barafter.mobilenavbar {
+  inset: 0 0 0 70%;
+}
+
+.barafter.mobilenavbar a {
+  color: #fff;
+  margin-left: 20px;
+}
+
+.barafter.mobilenavbar a:nth-child(1) {
+  margin-top: 60px;
 }
 
 /* Section 1 styles*/
@@ -341,8 +381,8 @@ header button:active {
     margin-left: 20px;
   }
 }
-@media (max-width: 650px) {
-  .upperbar nav {
+@media (max-width: 690px) {
+  .upperbar .desktopnavbar {
     display: none;
   }
   .open {
