@@ -1,5 +1,9 @@
 # Responsive-Web-Design
 
+<hr>
+This Project is currently undergoing some major changes and there will be expected inactivity from this repository.
+<hr>
+
 v0.1: 17/11/2022
 
 v0.2: 18/11/2022
