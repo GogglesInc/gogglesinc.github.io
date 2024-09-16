@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "SET DEBUG=responsive-web-design:* & nodemon ./bin/www"
+    "start": "SET DEBUG=responsive-web-design:* & nodemon ./bin/www --ignore public/ --ignore views"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
