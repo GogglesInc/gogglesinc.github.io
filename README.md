@@ -20,10 +20,9 @@ Landing Page
 │   ├── Custom Software Development
 │   └── CMS Development Platforms
 ├── Stats
-│   ├── 100,000+ Customers
-│   ├── 99.99% Uptime
-│   ├── 24/7 Support
-│   └── 5-Star Ratings
+│   ├── 500,000+ Developers
+│   ├── 100,000+ Organizations
+│   └── 99.99% Uptime
 ├── Testimonials
 │   └── John Doe
 │       └── "GogglesInc team's expertise in cloud computing solutions has been invaluable to our business. Their ability to scale our infrastructure seamlessly has enabled us to achieve significant growth."

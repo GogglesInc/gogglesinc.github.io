@@ -2,6 +2,13 @@
   "name": "gogglesinc-website",
   "private": true,
   "version": "0.0.0",
+  "description": "gogglesinc.github.io source code",
+  "license": "MIT",
+  "author": {
+    "name": "Goggles",
+    "email": "ngkhoa0075@gmail.com",
+    "url": "https://gogglesgogs.github.io/"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +21,7 @@
     "@heroicons/react": "^2.1.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "vite-plugin-mpa-plus": "^0.6.0"
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

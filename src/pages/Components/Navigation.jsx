@@ -23,36 +23,37 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import ThemeButton from "./themeButton.jsx";
+import { Link } from "react-router-dom";
 
 const products = [
   {
     name: "Analytics",
     description: "Get a better understanding of your traffic",
-    href: "#",
+    to: "/analytics",
     icon: ChartPieIcon,
   },
   {
     name: "Engagement",
     description: "Speak directly to your customers",
-    href: "#",
+    to: "/engagement",
     icon: CursorArrowRaysIcon,
   },
   {
     name: "Security",
     description: "Your customers’ data will be safe and secure",
-    href: "#",
+    to: "/security",
     icon: FingerPrintIcon,
   },
   {
     name: "Integrations",
     description: "Connect with third-party tools",
-    href: "#",
+    to: "/integrations",
     icon: SquaresPlusIcon,
   },
   {
     name: "Automations",
     description: "Build strategic funnels that will convert",
-    href: "#",
+    to: "/automations",
     icon: ArrowPathIcon,
   },
 ];
@@ -61,20 +62,20 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-5 z-50 w-full">
+    <header className="fixed z-50 w-full">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl bg-background/25 p-3 ring-1 ring-black/5 lg:px-8 dark:ring-white/5"
+        className="flex items-center justify-between p-6 lg:px-8"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">GogglesInc</span>
             <img
               alt=""
               src="/goggles-svg.svg"
               className="h-10 w-auto rounded-3xl"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           {!mobileMenuOpen ? (
@@ -91,18 +92,18 @@ export default function Navigation() {
           )}
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="text-base font-semibold leading-6 text-text-900"
           >
             Home
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/about"
             className="text-base font-semibold leading-6 text-text-900"
           >
             About
-          </a>
+          </Link>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-base font-semibold leading-6 text-text-900">
               Product
@@ -129,13 +130,13 @@ export default function Navigation() {
                       />
                     </div>
                     <div className="flex-auto">
-                      <a
-                        href={item.href}
+                      <Link
+                        to={item.to}
                         className="block font-semibold text-text-900"
                       >
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                       <p className="mt-1 text-text-600">{item.description}</p>
                     </div>
                   </div>
@@ -143,17 +144,17 @@ export default function Navigation() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a
-            href="#"
+          <Link
+            to="/blog"
             className="text-base font-semibold leading-6 text-text-900"
           >
             Blog
-          </a>
+          </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <ThemeButton />
           <a
-            href="#"
+            href="/login"
             className="text-base font-semibold leading-6 text-text-900"
           >
             Log in <span aria-hidden="true">&rarr;</span>
@@ -168,14 +169,14 @@ export default function Navigation() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-accent-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">GogglesInc</span>
               <img
                 alt=""
                 src="/goggles-svg.svg"
                 className="h-8 w-auto rounded-2xl"
               />
-            </a>
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -188,18 +189,18 @@ export default function Navigation() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-accent-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
                 >
                   About
-                </a>
+                </Link>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-text-900 hover:bg-background-50">
                     Product
@@ -212,8 +213,8 @@ export default function Navigation() {
                     {[...products].map((item) => (
                       <DisclosureButton
                         key={item.name}
-                        as="a"
-                        href={item.href}
+                        as={<Link />}
+                        href={item.to}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-text-900 hover:bg-background-50"
                       >
                         {item.name}
@@ -221,21 +222,21 @@ export default function Navigation() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a
-                  href="#"
+                <Link
+                  to="/blog"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
                 >
                   Blog
-                </a>
+                </Link>
               </div>
               <div className="py-6">
-                <ThemeButton />
                 <a
-                  href="#"
+                  href="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
                 >
                   Log in
                 </a>
+                <ThemeButton />
               </div>
             </div>
           </div>

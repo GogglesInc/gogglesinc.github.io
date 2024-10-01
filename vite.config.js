@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
-  appType: "mpa",
   plugins: [react()],
   build: {},
 });
