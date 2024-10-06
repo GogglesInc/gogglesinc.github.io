@@ -1,8 +1,10 @@
-"use client";
+import { Link } from "react-router-dom";
+
+("use client");
 
 export default function Hero() {
   return (
-    <div className="relative overflow-x-hidden bg-background">
+    <div className="relative overflow-x-hidden bg-background pb-10 sm:pb-12 lg:pb-16">
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           aria-hidden="true"
@@ -20,10 +22,10 @@ export default function Hero() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-text ring-1 ring-accent-900/10 hover:ring-accent-900/20">
               Announcing our next round of funding.{" "}
-              <a href="#" className="font-semibold text-text-600">
+              <Link to="/" className="font-semibold text-text-600">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Read more <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="text-center">
@@ -39,15 +41,17 @@ export default function Hero() {
               technology.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <button className="rounded-md bg-background-500 px-3.5 py-2.5 text-sm font-semibold text-text-50 shadow-sm hover:bg-background-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-background-500 active:bg-background-300">
-                Get started
-              </button>
-              <a
-                href="#"
+              <Link to="/pricing">
+                <button className="rounded-md bg-background-500 px-3.5 py-2.5 text-sm font-semibold text-text-50 shadow-sm hover:bg-background-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-background-500 active:bg-background-300">
+                  Get started
+                </button>
+              </Link>
+              <Link
+                to="/about"
                 className="text-sm font-semibold leading-6 text-text-900"
               >
                 Learn more <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

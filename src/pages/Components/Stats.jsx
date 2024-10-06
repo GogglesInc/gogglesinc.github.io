@@ -1,21 +1,28 @@
 const stats = [
-  { id: 1, name: "Transactions every 24 hours", value: "500,000+ Developers" },
-  { id: 2, name: "Assets under holding", value: "100,000+ Organizations" },
-  { id: 3, name: "New users annually", value: "99.99% Uptime" },
+  { name: "New developers annually", value: "492,000+" },
+  { name: " Organizations on the platform", value: "97,000+" },
+  { name: "Uptime guaranteed", value: "99.99%" },
 ];
 
-export default function Example() {
+export default function Stats() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-background py-10 sm:py-12 lg:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+        <div className="text-center lg:text-left">
+          <h2 className="text-3xl font-bold tracking-tight text-text-900 sm:text-4xl">
+            Trusted by developers worldwide
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-text-600">
+            Lorem ipsum dolor sit amet consect adipisicing possimus.
+          </p>
+        </div>
+        <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center lg:grid-cols-3">
           {stats.map((stat) => (
-            <div
-              key={stat.id}
-              className="mx-auto flex max-w-xs flex-col gap-y-4"
-            >
-              <dt className="text-base leading-7 text-gray-600">{stat.name}</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+            <div key={stat.name} className="flex flex-col bg-accent-400/5 p-8">
+              <dt className="text-sm font-semibold leading-6 text-text-600">
+                {stat.name}
+              </dt>
+              <dd className="-order-last text-3xl font-semibold tracking-tight text-text-900">
                 {stat.value}
               </dd>
             </div>

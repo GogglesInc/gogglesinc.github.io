@@ -93,16 +93,16 @@ export default function Navigation() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Link
-            to="/"
-            className="text-base font-semibold leading-6 text-text-900"
-          >
-            Home
-          </Link>
-          <Link
             to="/about"
             className="text-base font-semibold leading-6 text-text-900"
           >
             About
+          </Link>
+          <Link
+            to="/pricing"
+            className="text-base font-semibold leading-6 text-text-900"
+          >
+            Pricing
           </Link>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-base font-semibold leading-6 text-text-900">
@@ -153,12 +153,12 @@ export default function Navigation() {
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <ThemeButton />
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="text-base font-semibold leading-6 text-text-900"
           >
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog
@@ -190,16 +190,16 @@ export default function Navigation() {
             <div className="-my-6 divide-y divide-accent-500/10">
               <div className="space-y-2 py-6">
                 <Link
-                  to="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
-                >
-                  Home
-                </Link>
-                <Link
                   to="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
                 >
                   About
+                </Link>
+                <Link
+                  to="/pricing"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
+                >
+                  Pricing
                 </Link>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-text-900 hover:bg-background-50">
@@ -211,14 +211,13 @@ export default function Navigation() {
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
                     {[...products].map((item) => (
-                      <DisclosureButton
+                      <Link
                         key={item.name}
-                        as={<Link />}
-                        href={item.to}
+                        to={item.to}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-text-900 hover:bg-background-50"
                       >
                         {item.name}
-                      </DisclosureButton>
+                      </Link>
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
@@ -230,12 +229,12 @@ export default function Navigation() {
                 </Link>
               </div>
               <div className="py-6">
-                <a
-                  href="/login"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
+                <Link
+                  to="/login"
+                  className="-mx-3 mb-4 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
                 >
                   Log in
-                </a>
+                </Link>
                 <ThemeButton />
               </div>
             </div>
