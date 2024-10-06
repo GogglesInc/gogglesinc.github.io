@@ -1,9 +1,9 @@
 import Navigation from "../Components/Navigation";
-export default function About() {
+export default function Login() {
   return (
     <>
       <Navigation />
-      About Page
+      Login Page
     </>
   );
 }

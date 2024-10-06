@@ -1,9 +1,9 @@
 import Navigation from "../Components/Navigation";
-export default function About() {
+export default function Pricing() {
   return (
     <>
       <Navigation />
-      About Page
+      Pricing Page
     </>
   );
 }
