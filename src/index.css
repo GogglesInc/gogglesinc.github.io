@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    transition: all 1s ease;
-  }
   :root[data-theme="light"] {
     --text: 0, 9, 51;
     --background: 245, 247, 255;
@@ -138,4 +135,8 @@
     --accent-900: 207 215 252;
     --accent-950: 231 235 253;
   }
+}
+
+body * {
+  @apply transition-colors;
 }

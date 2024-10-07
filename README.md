@@ -46,11 +46,6 @@ Landing Page
 │   │   └── "GogglesInc's AI & Machine Learning capabilities have enabled us to develop innovative new products and services. Their expertise has been instrumental to our success."
 │   └── Ethan Davis
 │       └── "GogglesInc's team went above and beyond to ensure that our project was completed on time and within budget. Their dedication and hard work are truly commendable."
-├── Pricing
-│   ├── Free: $0/month
-│   ├── Starter: $29/month
-│   ├── Pro: $99/month
-│   └── Enterprise: $299/month
 ├── FAQs
 │   ├── What services do you offer?
 │   │   └── We offer a wide range of technology services, including cloud computing, data analytics, AI & machine learning, cybersecurity, custom software development, and CMS development platforms.
@@ -64,7 +59,9 @@ Landing Page
 │   │   └── We guarantee 99.99% uptime for our cloud computing services. This means that your applications will be available 24/7, ensuring minimal downtime.
 │   └── How do I contact your support team?
 │       └── You can contact our support team by email, phone, or live chat. Our team is available 24/7 to assist you with any questions or issues you may have.
-└── Newsletter Signup
+├── CTA
+└── Footer
+
 ```
 
 ```
@@ -73,4 +70,9 @@ About Page
 
 ```
 Pricing Page
+├── Pricing
+│   ├── Free: $0/month
+│   ├── Starter: $29/month
+│   ├── Pro: $99/month
+│   └── Enterprise: $299/month
 ```

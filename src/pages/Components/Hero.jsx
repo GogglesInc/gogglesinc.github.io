@@ -42,7 +42,7 @@ export default function Hero() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link to="/pricing">
-                <button className="rounded-md bg-background-500 px-3.5 py-2.5 text-sm font-semibold text-text-50 shadow-sm hover:bg-background-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-background-500 active:bg-background-300">
+                <button className="rounded-md bg-background-500 px-3.5 py-2.5 text-sm font-semibold text-[#ccd5ff] shadow-sm hover:bg-background-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-background-500 active:bg-background-300">
                   Get started
                 </button>
               </Link>
