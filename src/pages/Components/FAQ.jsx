@@ -54,14 +54,14 @@ export default function Stats() {
           <h2 className="text-2xl font-bold leading-10 tracking-tight text-text-900">
             Frequently asked questions
           </h2>
-          <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
+          <dl className="mt-10 space-y-6 divide-y divide-text-900/10">
             {faqs.map((faq) => (
               <Disclosure key={faq.id} as="div" className="pt-6">
                 {({ open }) => (
                   <>
                     {" "}
                     <dt>
-                      <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
+                      <DisclosureButton className="group flex w-full items-start justify-between text-left text-text-900">
                         <span className="text-lg font-semibold leading-7">
                           {faq.question}
                         </span>
