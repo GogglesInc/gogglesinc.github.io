@@ -1,5 +1,12 @@
-# GogglesInc-Website
+# Goggles Inc.
 
+> Empowering Businesses with Cutting-Edge Technology.
+
+Goggles Inc. is a leading technology company dedicated to providing innovative and comprehensive solutions across a wide range of tech services. As a one-stop shop, we offer a seamless experience for individuals and businesses seeking cutting-edge technology solutions.
+
+[Link to homepage](gogglesinc.github.io)
+
+## Website structure
 ```
 Landing Page
 ├── Hero
@@ -61,7 +68,6 @@ Landing Page
 │       └── You can contact our support team by email, phone, or live chat. Our team is available 24/7 to assist you with any questions or issues you may have.
 ├── CTA
 └── Footer
-
 ```
 
 ```
@@ -76,3 +82,5 @@ Pricing Page
 │   ├── Pro: $99/month
 │   └── Enterprise: $299/month
 ```
+
+© 2022 Goggles Inc. All rights reserved
