@@ -4,9 +4,10 @@
 
 Goggles Inc. is a leading technology company dedicated to providing innovative and comprehensive solutions across a wide range of tech services. As a one-stop shop, we offer a seamless experience for individuals and businesses seeking cutting-edge technology solutions.
 
-[Link to homepage](gogglesinc.github.io)
+[Link to homepage](https://gogglesinc.github.io)
 
 ### Website structure
+
 ```
 Landing Page
 ├── Hero
@@ -51,8 +52,44 @@ Landing Page
 │   │   └── "I've been working with GogglesInc for years, and I've always been impressed by their professionalism and commitment to customer satisfaction."
 │   ├── Sophia Martinez
 │   │   └── "GogglesInc's AI & Machine Learning capabilities have enabled us to develop innovative new products and services. Their expertise has been instrumental to our success."
-│   └── Ethan Davis
-│       └── "GogglesInc's team went above and beyond to ensure that our project was completed on time and within budget. Their dedication and hard work are truly commendable."
+│   ├── Ethan Davis
+│   │   └── "GogglesInc's team went above and beyond to ensure that our project was completed on time and within budget. Their dedication and hard work are truly commendable."
+│   ├── Maria Garcia
+│   │   └── "GogglesInc has been a true partner in helping us grow our business. Their team is always responsive and willing to go the extra mile to ensure our success."
+│   ├── Thomas Baker
+│   │   └── "I've been working with GogglesInc for years, and I've always been impressed by their technical expertise and innovative solutions."
+│   ├── Ashley Clark
+│   │   └── "The GogglesInc team is always available to answer our questions and provide support. Their customer service is top-notch."
+│   ├── Christopher Lee
+│   │   └── "GogglesInc's pricing is very competitive, and their services have exceeded our expectations. I would highly recommend them to other businesses."
+│   ├── Jennifer Lin
+│   │   └── "GogglesInc has helped us streamline our operations and improve our efficiency. Their solutions have been a game-changer for our business."
+│   ├── Daniel Lee
+│   │   └── "GogglesInc's team was able to quickly understand our complex needs and provide a tailored solution that met our requirements exactly."
+│   ├── Emily Johnson
+│   │   └── "I've been using GogglesInc's services for years, and I've always been impressed by their commitment to customer satisfaction. They always go the extra mile to ensure we are happy with their services."
+│   ├── Olivia Smith
+│   │   └── "GogglesInc's AI & Machine Learning capabilities have helped us gain valuable insights into our customer data. This has allowed us to make more informed business decisions."
+│   ├── Noah Carter
+│   │   └── "The GogglesInc team is always available to provide support and guidance. Their expertise has been invaluable to our business."
+│   ├── Sophia Davis
+│   │   └── "I've been using GogglesInc's cybersecurity services for years, and I've never had a security breach. Their team is always on top of the latest threats and has helped us protect our sensitive data."
+│   ├── Ethan Baker
+│   │   └── "GogglesInc's cloud computing solutions have allowed us to scale our business without having to worry about managing our own infrastructure. This has saved us time and money."
+│   ├── William Hill
+│   │   └── "GogglesInc's team has been incredibly helpful in guiding us through the process of migrating our IT infrastructure to the cloud. Their expertise and support were invaluable."
+│   ├── Sarah Johnson
+│   │   └── "I've been impressed by GogglesInc's ability to deliver results on time and within budget. Their team is always professional and efficient."
+│   ├── Alex Smith
+│   │   └── "GogglesInc's AI & Machine Learning solutions have helped us gain a competitive edge in our industry. Their expertise has been instrumental to our success."
+│   ├── Emily Davis
+│   │   └── "I've been using GogglesInc's cybersecurity services for years, and I've always felt confident in the security of my data. Their team is always up-to-date on the latest threats and takes proactive measures to protect our systems."
+│   ├── Michael Lee
+│   │   └── "GogglesInc's custom software development team was able to create a solution that perfectly met our specific needs. Their attention to detail and commitment to quality were exceptional."
+│   ├── Olivia Carter
+│   │   └── "I've been using GogglesInc's CMS platform for years, and I love how easy it is to use and customize. It has helped us streamline our content management process and improve our website's performance."
+│   └── Noah Hill
+│       └── "GogglesInc's cloud computing solutions have allowed us to reduce our IT costs and improve our scalability. I highly recommend their services to any business looking to modernize their technology infrastructure."
 ├── FAQs
 │   ├── What services do you offer?
 │   │   └── We offer a wide range of technology services, including cloud computing, data analytics, AI & machine learning, cybersecurity, custom software development, and CMS development platforms.

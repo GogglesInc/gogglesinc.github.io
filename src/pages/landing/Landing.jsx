@@ -1,12 +1,14 @@
+import { useIsPresent, motion } from "framer-motion";
+import { useEffect } from "react";
 import Navigation from "../Components/Navigation.jsx";
 import Hero from "../Components/Hero.jsx";
 import Reputation from "../Components/Reputation.jsx";
 import Features from "../Components/Features.jsx";
 import Stats from "../Components/Stats.jsx";
 import Testimonials from "../Components/Testimonials.jsx";
-import { useIsPresent, motion } from "framer-motion";
-import { useEffect } from "react";
 import FAQ from "../Components/FAQ.jsx";
+import CTA from "../Components/CallToAction.jsx";
+import Footer from "../Components/Footer.jsx";
 
 export default function Landing() {
   const isPresent = useIsPresent();
@@ -22,6 +24,8 @@ export default function Landing() {
       <Stats />
       <Testimonials />
       <FAQ />
+      <CTA />
+      <Footer />
       <motion.div
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}

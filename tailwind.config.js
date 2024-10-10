@@ -1,7 +1,9 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: ['selector', '[data-theme="dark"]'],
+  darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
@@ -74,6 +76,9 @@ export default {
           900: "rgb(var(--accent-900))",
           950: "rgb(var(--accent-950))",
         },
+      },
+      fontFamily: {
+        sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
       },
     },
   },

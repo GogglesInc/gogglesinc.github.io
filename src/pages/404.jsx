@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 export default function ErrorPage() {
   const [word, setWord] = useState("");
   const wordList = ["got lost!", "what?", "why?", "how?", "uhhh", "huh?"];
@@ -27,7 +29,7 @@ export default function ErrorPage() {
 
     getRandomWord();
 
-    const intervalId = setInterval(getRandomWord, 750);
+    const intervalId = setInterval(getRandomWord, 5000);
 
     return () => clearInterval(intervalId);
   });
@@ -45,11 +47,16 @@ export default function ErrorPage() {
           </p>
           <p className="mt-3 font-mono text-base text-text-900">{word}</p>
           <div className="mt-3 flex items-center justify-center gap-x-6">
-            <Link
-              to="/"
-              className="rounded-md bg-background-500 px-3.5 py-2.5 text-sm font-semibold text-[#ccd5ff] shadow-sm hover:bg-background-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-            >
-              Go back
+            <Link to="/">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={
+                  "rounded-md bg-background-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-background-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-background-500 active:bg-background-400"
+                }
+              >
+                Go back
+              </motion.button>
             </Link>
             <a
               href="https://github.com/gogglesgogs/"

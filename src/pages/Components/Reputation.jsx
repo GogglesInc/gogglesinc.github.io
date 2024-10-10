@@ -103,7 +103,6 @@ export default function Reputation() {
               </clipPath>
             </defs>
           </svg>
-
           <svg
             width="1156"
             height="150"

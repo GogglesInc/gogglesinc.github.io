@@ -61,7 +61,8 @@ export default function Features() {
           </div>
           <img
             alt=""
-            src=""
+            src="https://picsum.photos/912/540"
+            loading="lazy"
             width={912}
             height={540}
             className="w-[48rem] max-w-none rounded-xl bg-background-900 shadow-xl ring-1 ring-background-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
