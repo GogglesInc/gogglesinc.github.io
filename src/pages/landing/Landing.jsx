@@ -13,7 +13,8 @@ import Footer from "../Components/Footer.jsx";
 export default function Landing() {
   const isPresent = useIsPresent();
   useEffect(() => {
-    document.title = "Goggles Inc.";
+    document.title =
+      "Goggles Inc. - Empowering Businesses with Cutting-Edge Technology.";
   });
   return (
     <>
