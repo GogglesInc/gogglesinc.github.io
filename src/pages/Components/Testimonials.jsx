@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import getInitials from "../../utilities/getInitials";
 
 const testimonials = [
   {
@@ -236,9 +237,9 @@ export default function Testimonials() {
                   </blockquote>
                   <figcaption className="mt-6 flex gap-x-4 text-center">
                     <img
-                      // src={items.img}
+                      // src={items.img} 
                       src={`https://picsum.photos/40/40?random=${index}`}
-                      alt=""
+                      alt={getInitials(items.name)}
                       loading="lazy"
                       className="h-10 w-10 rounded-full bg-background-900"
                     />
