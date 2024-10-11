@@ -137,7 +137,7 @@ async function getImage() {
 }
 
 export default function Testimonials() {
-  const { data, isSuccess } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["images"],
     queryFn: getImage,
     refetchOnWindowFocus: false,
@@ -167,21 +167,25 @@ export default function Testimonials() {
                     <p>{items.quote}</p>
                   </blockquote>
                   <figcaption className="mt-6 flex gap-x-4 text-center">
-                    <img
-                      src={isSuccess ? data[i].picture.thumbnail : ""}
-                      alt=""
-                      className="pointer-events-none size-10 rounded-full bg-background-900"
-                    />
+                    {isLoading && (
+                      <div className="pointer-events-none size-10 rounded-full bg-background-900" />
+                    )}
+                    {data && (
+                      <img
+                        src={data && data[i].picture.thumbnail}
+                        alt=""
+                        className="pointer-events-none size-10 rounded-full bg-background-900"
+                      />
+                    )}
                     <div>
                       <div className="font-semibold text-text-900">
-                        {isSuccess
-                          ? `${data[i].name.first} ${data[i].name.last}`
-                          : " "}
+                        {isLoading && "Loading..."}
+                        {data && `${data[i].name.first} ${data[i].name.last}`}
                       </div>
                       <div className="text-text-600">
-                        {isSuccess
-                          ? username(data[i].name.first, data[i].name.last)
-                          : " "}
+                        {isLoading && "Loading..."}
+                        {data &&
+                          username(data[i].name.first, data[i].name.last)}
                       </div>
                     </div>
                   </figcaption>
