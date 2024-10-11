@@ -73,7 +73,7 @@ export default function Navigation() {
             <img
               alt=""
               src="/goggles-svg.svg"
-              className="h-10 w-auto rounded-3xl"
+              className="size-10 w-auto rounded-3xl"
             />
           </Link>
         </div>
@@ -174,7 +174,7 @@ export default function Navigation() {
               <img
                 alt=""
                 src="/goggles-svg.svg"
-                className="h-8 w-auto rounded-2xl"
+                className="size-8 w-auto rounded-2xl"
               />
             </Link>
             <button
