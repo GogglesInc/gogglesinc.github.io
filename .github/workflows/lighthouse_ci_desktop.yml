@@ -5,12 +5,8 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-concurrency:
-  group: "lhci"
-  cancel-in-progress: true
-
 jobs:
-  lhci:
+  lighthouse:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -27,6 +23,6 @@ jobs:
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.14.x
-          lhci autorun --config=./lighthouserc_desktop.yml
+          lhci autorun --preset=desktop --form-factor=desktop
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
