@@ -1,4 +1,4 @@
-name: Lighthouse CI
+name: Lighthouse CI Desktop
 
 on:
   push:
@@ -27,6 +27,6 @@ jobs:
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.14.x
-          lhci autorun --config=../../.lighthouserc_desktop.yml
+          lhci autorun --config=./lighthouserc_desktop.yml
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
