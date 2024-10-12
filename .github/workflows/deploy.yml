@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: Build & Deploy 
 
 on:
   push:
@@ -42,4 +42,4 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1.2.3 
         with: 
           ref: main 
-          workflow: lhci
+          workflow: Lighthouse CI
