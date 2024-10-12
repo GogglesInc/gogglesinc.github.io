@@ -8,9 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Wait
-        uses: actions/wait@v2 
-        with: 
-          seconds: 60
+        run: sleep 1m
+        shell: bash
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Audit
