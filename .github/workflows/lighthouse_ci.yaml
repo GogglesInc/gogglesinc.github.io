@@ -17,9 +17,6 @@ jobs:
         with:
           urls: |
             https://gogglesinc.github.io/
-            https://gogglesinc.github.io/about
-            https://gogglesinc.github.io/blog
-            https://gogglesinc.github.io/pricing
           uploadArtifacts: true
           temporaryPublicStorage: true
           runs: 3
