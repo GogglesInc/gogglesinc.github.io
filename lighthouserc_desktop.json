@@ -1,0 +1,27 @@
+{
+  "ci": {
+    "collect": {
+      "additive": true,
+      "staticDistDir": "./dist",
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "desktop",
+        "formFactor": "desktop"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    },
+    "assert": {
+      "aggregation": "median-run",
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "categories:performance": ["warn", { "minScore": 1 }],
+        "categories:best-practices": ["warn", { "minScore": 1 }],
+        "categories:accessibility": ["warn", { "minScore": 1 }],
+        "categories:seo": ["warn", { "minScore": 1 }],
+        "categories:pwa": ["warn", { "minScore": 1 }]
+      }
+    }
+  }
+}
