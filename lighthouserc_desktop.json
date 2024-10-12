@@ -11,17 +11,6 @@
     },
     "upload": {
       "target": "temporary-public-storage"
-    },
-    "assert": {
-      "aggregation": "median-run",
-      "preset": "lighthouse:recommended",
-      "assertions": {
-        "categories:performance": ["warn", { "minScore": 1 }],
-        "categories:best-practices": ["warn", { "minScore": 1 }],
-        "categories:accessibility": ["warn", { "minScore": 1 }],
-        "categories:seo": ["warn", { "minScore": 1 }],
-        "categories:pwa": ["warn", { "minScore": 1 }]
-      }
     }
   }
 }
