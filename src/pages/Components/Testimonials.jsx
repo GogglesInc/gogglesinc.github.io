@@ -174,6 +174,7 @@ export default function Testimonials() {
                       <img
                         src={data && data[i].picture.thumbnail}
                         alt=""
+                        loading="lazy"
                         className="pointer-events-none size-10 rounded-full bg-background-900"
                       />
                     )}

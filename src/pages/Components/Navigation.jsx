@@ -72,6 +72,7 @@ export default function Navigation() {
             <span className="sr-only">Goggles Inc.</span>
             <img
               alt=""
+              loading="lazy"
               src="/goggles-svg.svg"
               className="size-10 w-auto rounded-3xl"
             />
@@ -174,6 +175,7 @@ export default function Navigation() {
               <img
                 alt=""
                 src="/goggles-svg.svg"
+                loading="lazy"
                 className="size-8 w-auto rounded-2xl"
               />
             </Link>

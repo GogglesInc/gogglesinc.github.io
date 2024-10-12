@@ -1,14 +1,20 @@
 # Goggles Inc.
 
-### Empowering Businesses with Cutting-Edge Technology.
+## Empowering Businesses with Cutting-Edge Technology.
 
-Goggles Inc. is a leading technology company dedicated to providing innovative and comprehensive solutions across a wide range of tech services. As a one-stop shop, we offer a seamless experience for individuals and businesses seeking cutting-edge technology solutions.
+> Goggles Inc. is a leading technology company dedicated to providing innovative and comprehensive solutions across a wide range of tech services. As a one-stop shop, we offer a seamless experience for individuals and businesses seeking cutting-edge technology solutions.
 
 [Link to homepage](https://gogglesinc.github.io)
 
+### Useful resources
+
+[Color palette](https://www.realtimecolors.com/?colors=ccd5ff-00020a-6b86ff-12268c-2749f1&fonts=Inter-Inter)
+
 ### Website structure
 
-```
+<details>
+<summary>Landing ("/")</summary>
+<pre>
 Landing Page
 ├── Hero
 │   ├── Empowering Businesses with Cutting-Edge Technology
@@ -106,45 +112,49 @@ Landing Page
 ├── CTA (Call to Action)
 │   └── Get Started Now
 └── Footer
-```
+</pre>
+</details>
 
-```
-About Page
-```
+<details>
+<summary>About ("/about")</summary>
+<pre>About Page</pre>
+</details>
 
-```
-Pricing Page
-├── Pricing Plans
-│   ├── Free: $0/month
-│   │   └── Basic features (limited storage, basic support)
-│   ├── Starter: $29/month
-│   │   ├── Increased storage (200GB)
-│   │   └── Priority email and chat support
-│   ├── Pro: $99/month
-│   │   ├── Advanced features (custom domain, integration with popular tools)
-│   │   ├── Dedicated account manager
-│   │   └── 24/7 phone support
-│   └── Enterprise: $299/month
-│        ├── Custom solutions
-│        ├── Enterprise-grade support (priority access to new features)
-│        ├── Unlimited storage
-│        └── Priority technical support
-├── Compare Plans
-├── FAQs
-│   ├── What services do you offer?
-│   │   └── We offer a wide range of technology services, including cloud computing, data analytics, AI & machine learning, cybersecurity, custom software development, and CMS development platforms.
-│   ├── How do I get started?
-│   │   └── To get started, you can contact our sales team for a consultation. We will work with you to understand your specific needs and recommend the best solutions for your business.
-│   ├── What is your pricing structure?
-│   │   └── Our pricing is flexible and tailored to your specific requirements. We offer a variety of pricing plans, including a free plan, a Starter plan, a Pro plan, and an Enterprise plan. Explore pricing plans: 'Link to pricing page'.
-│   ├── Do you offer customization options?
-│   │   └── Yes, we offer customization options for many of our services, including our CMS development platforms. Our team of experts can work with you to create a tailored solution that meets your unique needs.
-│   ├── What is your uptime guarantee?
-│   │   └── We guarantee 99.99% uptime for our cloud computing services. This means that your applications will be available 24/7, ensuring minimal downtime.
-│   └── How do I contact your support team?
-│       └── You can contact our support team by email, phone, or live chat. Our team is available 24/7 to assist you with any questions or issues you may have.
-└── Footer
-
-```
+<details>
+<summary>Pricing ("/pricing")</summary>
+<pre>
+  Pricing Page
+  ├── Pricing Plans
+  │   ├── Free: $0/month
+  │   │   └── Basic features (limited storage, basic support)
+  │   ├── Starter: $29/month
+  │   │   ├── Increased storage (200GB)
+  │   │   └── Priority email and chat support
+  │   ├── Pro: $99/month
+  │   │   ├── Advanced features (custom domain, integration with popular tools)
+  │   │   ├── Dedicated account manager
+  │   │   └── 24/7 phone support
+  │   └── Enterprise: $299/month
+  │        ├── Custom solutions
+  │        ├── Enterprise-grade support (priority access to new features)
+  │        ├── Unlimited storage
+  │        └── Priority technical support
+  ├── Compare Plans
+  ├── FAQs
+  │   ├── What services do you offer?
+  │   │   └── We offer a wide range of technology services, including cloud computing, data analytics, AI & machine learning, cybersecurity, custom software development, and CMS development platforms.
+  │   ├── How do I get started?
+  │   │   └── To get started, you can contact our sales team for a consultation. We will work with you to understand your specific needs and recommend the best solutions for your business.
+  │   ├── What is your pricing structure?
+  │   │   └── Our pricing is flexible and tailored to your specific requirements. We offer a variety of pricing plans, including a free plan, a Starter plan, a Pro plan, and an Enterprise plan. Explore pricing plans: 'Link to pricing page'.
+  │   ├── Do you offer customization options?
+  │   │   └── Yes, we offer customization options for many of our services, including our CMS development platforms. Our team of experts can work with you to create a tailored solution that meets your unique needs.
+  │   ├── What is your uptime guarantee?
+  │   │   └── We guarantee 99.99% uptime for our cloud computing services. This means that your applications will be available 24/7, ensuring minimal downtime.
+  │   └── How do I contact your support team?
+  │       └── You can contact our support team by email, phone, or live chat. Our team is available 24/7 to assist you with any questions or issues you may have.
+  └── Footer
+</pre>
+</details>
 
 > © 2022 Goggles Inc. All rights reserved
