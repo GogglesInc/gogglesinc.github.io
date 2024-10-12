@@ -39,7 +39,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Dispatch Lighthouse CI
-        uses: actions/workflow-dispatch@v2 
+        uses: benc-uk/workflow-dispatch@v1.2.3 
         with: 
           ref: main 
           workflow: lhci
