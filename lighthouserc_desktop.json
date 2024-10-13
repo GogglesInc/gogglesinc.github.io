@@ -6,7 +6,8 @@
       "settings": {
         "preset": "desktop",
         "formFactor": "desktop"
-      }
+      },
+      "url": ["http://localhost/"]
     },
     "upload": {
       "target": "temporary-public-storage"

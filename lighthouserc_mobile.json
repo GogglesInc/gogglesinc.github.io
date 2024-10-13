@@ -5,7 +5,8 @@
       "numberOfRuns": 3,
       "settings": {
         "formFactor": "mobile"
-      }
+      },
+      "url": ["http://localhost/"]
     },
     "upload": {
       "target": "temporary-public-storage"
