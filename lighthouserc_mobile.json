@@ -1,7 +1,6 @@
 {
   "ci": {
     "collect": {
-      "additive": true,
       "staticDistDir": "./dist",
       "numberOfRuns": 3,
       "settings": {
