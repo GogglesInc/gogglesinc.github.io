@@ -36,4 +36,5 @@ jobs:
         run: |
           ls -a
           ls ./reports
-          cat manifest.json
+          ls ./.lighthouseci
+          cat ./reports/manifest.json
