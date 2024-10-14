@@ -5,7 +5,8 @@
       "numberOfRuns": 3,
       "settings": {
         "preset": "desktop",
-        "formFactor": "desktop"
+        "formFactor": "desktop",
+        "outputPath": "./reports/lighthouse.desktop"
       },
       "url": ["http://localhost/"]
     },
