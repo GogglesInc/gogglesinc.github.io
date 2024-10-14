@@ -9,10 +9,8 @@
       "url": ["http://localhost/"]
     },
     "upload": {
-      "target": "temporary-public-storage"
-    },
-    "assert": {
-      "aggregation": "median-run"
+      "target": "filesystem",
+      "outputDir": "./reports"
     }
   }
 }
