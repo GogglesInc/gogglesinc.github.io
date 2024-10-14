@@ -27,7 +27,13 @@ jobs:
         run: |
           npm install -g @lhci/cli@0.14.x
           lhci autorun --config=./lighthouserc_desktop.json
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lhci-desktop-reports
+          path: "./reports"
       - name: Check dir
         run: |
           ls -a
           ls ./reports
+          cat manifest.json
