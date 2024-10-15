@@ -1,0 +1,46 @@
+name: Lint & Test Codebase
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: read
+  statuses: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Lint code
+        uses: super-linter/super-linter@v7.1.0
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - name: Install dependencies & Lighthouse CI
+        run: |
+          npm ci
+          npm install -g @lhci/cli@0.14.x
+      - name: Build
+        run: npm run build
+      - name: Run Audits on desktop
+        run: lhci autorun --config="./lhci_desktop.json"
+      - name: Run Audits on mobile
+        run: lhci autorun --config="./lhci_mobile.json"
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-artifact
+          path: "./"

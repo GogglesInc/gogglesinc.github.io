@@ -6,6 +6,8 @@
 
 [Link to homepage](https://gogglesinc.github.io)
 
+[![Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE_NAME>/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 ### Useful resources
 
 [Color palette](https://www.realtimecolors.com/?colors=ccd5ff-00020a-6b86ff-12268c-2749f1&fonts=Inter-Inter)

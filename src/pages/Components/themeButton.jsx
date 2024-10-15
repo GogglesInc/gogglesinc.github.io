@@ -29,7 +29,7 @@ const ThemeButton = () => {
   };
 
   return (
-    <button onClick={toggleTheme}>
+    <button onClick={toggleTheme} aria-label="Toggle theme">
       {theme === "light" ? (
         <SunIcon className="mr-5 size-6 fill-text" />
       ) : (

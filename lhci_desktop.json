@@ -1,0 +1,16 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./dist",
+      "settings": {
+        "preset": "desktop",
+        "formFactor": "desktop"
+      },
+      "url": ["http://localhost/"],
+      "numberOfRuns": 3
+    }
+  },
+  "upload": {
+    "target": "temporary-public-storage"
+  }
+}

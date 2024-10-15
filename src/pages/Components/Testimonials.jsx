@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 import username from "../../utilities/username";
+import cn from "../../utilities/cn";
 import { useQuery } from "@tanstack/react-query";
 
 const testimonials = [
@@ -129,7 +130,6 @@ async function getImage() {
     fetch(`https://randomuser.me/api/?results=${testimonials.length}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.results);
         resolve(data.results);
       })
       .catch(console.error);
@@ -137,18 +137,26 @@ async function getImage() {
 }
 
 export default function Testimonials() {
-  const { data, isLoading } = useQuery({
-    queryKey: ["images"],
-    queryFn: getImage,
-    refetchOnWindowFocus: false,
-  });
-
   const [isVisible, setVisible] = useState(false);
 
   const content = isVisible ? testimonials : testimonials.slice(0, 6);
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "50%",
+    amount: "some",
+  });
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["images"],
+    queryFn: getImage,
+    refetchOnWindowFocus: false,
+    enabled: !!isInView,
+  });
+
   return (
-    <div className="bg-background py-10 sm:py-12 lg:py-16">
+    <div className="bg-background py-10 sm:py-12 lg:py-16" ref={ref}>
       <div className="mx-auto flex max-w-7xl flex-col px-6 lg:px-8">
         <div className="mx-auto max-w-xl text-center">
           <h2 className="text-lg font-semibold leading-8 tracking-tight text-text-600">
@@ -164,29 +172,43 @@ export default function Testimonials() {
               <div key={i} className="pt-8 sm:inline-block sm:w-full sm:px-4">
                 <figure className="rounded-2xl bg-background-50 p-8 text-sm leading-6 shadow-lg">
                   <blockquote className="text-text-900">
-                    <p>{items.quote}</p>
+                    <div>
+                      {isLoading && (
+                        <div className="h-32 animate-pulse rounded-xl bg-text-200"></div>
+                      )}
+                      {data && items.quote}
+                    </div>
                   </blockquote>
-                  <figcaption className="mt-6 flex gap-x-4 text-center">
+                  <figcaption className="mt-6 flex items-center gap-x-4 text-center">
                     {isLoading && (
-                      <div className="pointer-events-none size-10 rounded-full bg-background-900" />
+                      <div className="pointer-events-none size-10 animate-pulse rounded-full bg-text-200" />
                     )}
                     {data && (
                       <img
-                        src={data && data[i].picture.thumbnail}
+                        src={data && data[i]?.picture.thumbnail}
                         alt=""
                         loading="lazy"
                         className="pointer-events-none size-10 rounded-full bg-background-900"
                       />
                     )}
-                    <div>
+                    <div
+                      className={cn(
+                        "flex flex-col gap-1",
+                        isLoading ? "w-1/2" : "",
+                      )}
+                    >
                       <div className="font-semibold text-text-900">
-                        {isLoading && "Loading..."}
-                        {data && `${data[i].name.first} ${data[i].name.last}`}
+                        {isLoading && (
+                          <div className="h-5 animate-pulse rounded-full bg-text-200"></div>
+                        )}
+                        {data && `${data[i]?.name.first} ${data[i]?.name.last}`}
                       </div>
                       <div className="text-text-600">
-                        {isLoading && "Loading..."}
+                        {isLoading && (
+                          <div className="h-5 w-2/3 animate-pulse rounded-full bg-text-200"></div>
+                        )}
                         {data &&
-                          username(data[i].name.first, data[i].name.last)}
+                          username(data[i]?.name.first, data[i]?.name.last)}
                       </div>
                     </div>
                   </figcaption>

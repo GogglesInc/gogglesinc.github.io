@@ -1,8 +1,10 @@
 name: Github Pages
 
 on:
-  push:
-    branches: ["main"]
+  workflow_run:
+    workflows: ["Lint & Test Codebase"]
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
