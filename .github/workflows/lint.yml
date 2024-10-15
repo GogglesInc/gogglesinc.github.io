@@ -46,6 +46,7 @@ jobs:
           VALIDATE_JSCPD: false
           VALIDATE_YAML: false
           JAVASCRIPT_ES_CONFIG_FILE: "eslint.config.js"
+          LINTER_RULES_PATH: .github/workflows/linter-rules
       - name: Push fixes
         if: >
           github.event_name == 'pull_request' &&
