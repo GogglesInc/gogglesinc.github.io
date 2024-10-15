@@ -1,14 +1,9 @@
-name: Lint & Test Codebase
+name: Lighthouse CI
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
-
-permissions:
-  contents: read
-  packages: read
-  statuses: write
 
 jobs:
   test:
@@ -16,14 +11,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Lint code
-        uses: super-linter/super-linter@v7.1.0
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -42,5 +29,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: test-artifact
+          name: Lighthouse-ci-artifact
           path: "./"
