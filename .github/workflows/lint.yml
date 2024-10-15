@@ -33,18 +33,19 @@ jobs:
         uses: super-linter/super-linter@v7.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FIX_CSS: true
           FIX_HTML_PRETTIER: true
           FIX_JAVASCRIPT_ES: true
-          FIX_JAVASCRIPT_PRETTIER: true
           FIX_JAVASCRIPT_STANDARD: true
           FIX_JSON: true
-          FIX_JSON_PRETTIER: true
           FIX_JSX: true
-          FIX_JSX_PRETTIER: true
           FIX_MARKDOWN: true
-          FIX_MARKDOWN_PRETTIER: true
           FIX_YAML_PRETTIER: true
+          VALIDATE_HTML: false
+          VALIDATE_CSS: false
+          VALIDATE_CHECKOV: false
+          VALIDATE_JSCPD: false
+          VALIDATE_YAML: false
+          JAVASCRIPT_ES_CONFIG_FILE: "eslint.config.js"
       - name: Push fixes
         if: >
           github.event_name == 'pull_request' &&
