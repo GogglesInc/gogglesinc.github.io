@@ -7,7 +7,8 @@
         "formFactor": "desktop"
       },
       "url": ["http://localhost/"],
-      "numberOfRuns": 3
+      "numberOfRuns": 3,
+      "additive": true
     }
   },
   "upload": {
