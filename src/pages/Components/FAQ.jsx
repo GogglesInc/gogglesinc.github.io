@@ -24,7 +24,7 @@ const faqs = [
     id: 3,
     question: "What is your pricing structure?",
     answer:
-      "Our pricing is flexible and tailored to your specific requirements. We offer a variety of pricing plans, including a free plan, a Starter plan, a Pro plan, and an Enterprise plan. Explore pricing plans: 'Link to pricing page'.",
+      "Our pricing is flexible and tailored to your specific requirements. We offer a variety of pricing plans, including a free plan, a Starter plan, a Pro plan, and an Enterprise plan.",
   },
   {
     id: 4,

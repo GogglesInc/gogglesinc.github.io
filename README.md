@@ -104,7 +104,7 @@ Landing Page
 │   ├── How do I get started?
 │   │   └── To get started, you can contact our sales team for a consultation. We will work with you to understand your specific needs and recommend the best solutions for your business.
 │   ├── What is your pricing structure?
-│   │   └── Our pricing is flexible and tailored to your specific requirements. We offer a variety of pricing plans, including a free plan, a Starter plan, a Pro plan, and an Enterprise plan. Explore pricing plans: 'Link to pricing page'.
+│   │   └── Our pricing is flexible and tailored to your specific requirements. We offer a variety of pricing plans, including a free plan, a Starter plan, a Pro plan, and an Enterprise plan.
 │   ├── Do you offer customization options?
 │   │   └── Yes, we offer customization options for many of our services, including our CMS development platforms. Our team of experts can work with you to create a tailored solution that meets your unique needs.
 │   ├── What is your uptime guarantee?
@@ -143,18 +143,6 @@ Landing Page
   │        └── Priority technical support
   ├── Compare Plans
   ├── FAQs
-  │   ├── What services do you offer?
-  │   │   └── We offer a wide range of technology services, including cloud computing, data analytics, AI & machine learning, cybersecurity, custom software development, and CMS development platforms.
-  │   ├── How do I get started?
-  │   │   └── To get started, you can contact our sales team for a consultation. We will work with you to understand your specific needs and recommend the best solutions for your business.
-  │   ├── What is your pricing structure?
-  │   │   └── Our pricing is flexible and tailored to your specific requirements. We offer a variety of pricing plans, including a free plan, a Starter plan, a Pro plan, and an Enterprise plan. Explore pricing plans: 'Link to pricing page'.
-  │   ├── Do you offer customization options?
-  │   │   └── Yes, we offer customization options for many of our services, including our CMS development platforms. Our team of experts can work with you to create a tailored solution that meets your unique needs.
-  │   ├── What is your uptime guarantee?
-  │   │   └── We guarantee 99.99% uptime for our cloud computing services. This means that your applications will be available 24/7, ensuring minimal downtime.
-  │   └── How do I contact your support team?
-  │       └── You can contact our support team by email, phone, or live chat. Our team is available 24/7 to assist you with any questions or issues you may have.
   └── Footer
 </pre>
 </details>
