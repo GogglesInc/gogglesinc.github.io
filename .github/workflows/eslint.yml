@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install Dependencies
         run: |
-          np ci
+          npm ci
           npm install eslint@8.10.0
           npm install @microsoft/eslint-formatter-sarif@3.1.0
       - name: Run ESLint
