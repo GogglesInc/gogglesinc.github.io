@@ -6,49 +6,40 @@ on:
   workflow_dispatch:
 
 jobs:
+  set-up:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - name: Install dependencies & Lighthouse CI
+        run: |
+          npm ci
+          npm install -g @lhci/cli@0.14.x
+      - name: Build
+        run: npm run build
   desktop:
     runs-on: ubuntu-latest
+    needs: [set-up]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "npm"
-      - name: Install dependencies & Lighthouse CI
-        run: |
-          npm ci
-          npm install -g @lhci/cli@0.14.x
-      - name: Build
-        run: npm run build
       - name: Run Audits on desktop
         run: lhci autorun --config="./lhci_desktop.json"
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Lighthouse-ci-desktop
-          path: "./"
   mobile:
     runs-on: ubuntu-latest
+    needs: [set-up]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "npm"
-      - name: Install dependencies & Lighthouse CI
-        run: |
-          npm ci
-          npm install -g @lhci/cli@0.14.x
-      - name: Build
-        run: npm run build
       - name: Run Audits on mobile
         run: lhci autorun --config="./lhci_mobile.json"
+  upload-artifacts:
+    runs-on: ubuntu-latest
+    needs: [desktop, mobile]
+    steps:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Lighthouse-ci-mobile
-          path: "./"
+          name: Lighthouse-ci-reports
+          path: "./.lighthouseci/"

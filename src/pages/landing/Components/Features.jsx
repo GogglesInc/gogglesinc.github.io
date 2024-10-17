@@ -3,6 +3,9 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
+import { useQuery } from "@tanstack/react-query";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const features = [
   {
@@ -25,7 +28,32 @@ const features = [
   },
 ];
 
+async function getFeatureImage() {
+  return new Promise((resolve) => {
+    fetch("https://picsum.photos/912/540")
+      .then((data) => {
+        resolve(data.url);
+      })
+      .catch(console.error);
+  });
+}
+
 export default function Features() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "100%",
+    amount: "some",
+  });
+
+  const { data } = useQuery({
+    queryKey: ["featureimage"],
+    queryFn: getFeatureImage,
+    refetchOnWindowFocus: false,
+    enabled: !!isInView,
+    staleTime: Infinity,
+  });
+
   return (
     <div className="flex min-h-screen place-items-center overflow-hidden bg-background py-10 sm:py-12 lg:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -59,14 +87,16 @@ export default function Features() {
               </dl>
             </div>
           </div>
-          <img
-            alt=""
-            src="https://picsum.photos/912/540"
-            loading="lazy"
-            width={912}
-            height={540}
-            className="w-[48rem] max-w-none rounded-xl bg-background-900 shadow-xl ring-1 ring-background-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-          />
+          {data ? (
+            <img
+              alt=""
+              src={data && data?.url}
+              loading="lazy"
+              className="aspect-video w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-background-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+            />
+          ) : (
+            <div className="aspect-video w-[48rem] max-w-none animate-pulse rounded-xl bg-background-200 shadow-xl ring-1 ring-background-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"></div>
+          )}
         </div>
       </div>
     </div>

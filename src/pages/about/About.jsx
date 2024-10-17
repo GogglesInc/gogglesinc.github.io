@@ -1,6 +1,9 @@
-import { useIsPresent, motion } from "framer-motion";
+import { useIsPresent } from "framer-motion";
 import Navigation from "../Components/Navigation";
 import { useEffect } from "react";
+import TransitionScreen from "../Components/TransitionScreen";
+import Footer from "../Components/Footer";
+
 export default function About() {
   const isPresent = useIsPresent();
   useEffect(() => {
@@ -9,14 +12,11 @@ export default function About() {
   return (
     <>
       <Navigation />
-      About Page
-      <motion.div
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
-        style={{ originX: isPresent ? 0 : 1 }}
-        className="fixed inset-0 z-[99] bg-accent"
-      />
+      <div className="grid h-screen place-items-center bg-background font-mono text-4xl text-text-900">
+        WIP: About Page
+      </div>
+      <Footer />
+      <TransitionScreen present={isPresent} />
     </>
   );
 }

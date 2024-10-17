@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import username from "../../utilities/username";
-import cn from "../../utilities/cn";
+import username from "../../../utilities/username";
+import cn from "../../../utilities/cn";
 import { useQuery } from "@tanstack/react-query";
 
 const testimonials = [
@@ -125,9 +125,11 @@ const testimonials = [
   },
 ];
 
-async function getImage() {
+async function getProfilePicture() {
+  // Simulate API wait time
+  await new Promise((resolve) => setTimeout(resolve, 5000));
   return new Promise((resolve) => {
-    fetch(`https://randomuser.me/api/?results=${testimonials.length}`)
+    fetch(`https://randomuser.me/api/?nat=us&results=${testimonials.length}`)
       .then((response) => response.json())
       .then((data) => {
         resolve(data.results);
@@ -144,15 +146,16 @@ export default function Testimonials() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
-    margin: "50%",
+    margin: "100%",
     amount: "some",
   });
 
   const { data, isLoading } = useQuery({
-    queryKey: ["images"],
-    queryFn: getImage,
+    queryKey: ["profilepicture"],
+    queryFn: getProfilePicture,
     refetchOnWindowFocus: false,
     enabled: !!isInView,
+    staleTime: Infinity,
   });
 
   return (
@@ -208,7 +211,7 @@ export default function Testimonials() {
                           <div className="h-5 w-2/3 animate-pulse rounded-full bg-text-200"></div>
                         )}
                         {data &&
-                          username(data[i]?.name.first, data[i]?.name.last)}
+                          username(data[i]?.name.first + data[i]?.name.last)}
                       </div>
                     </div>
                   </figcaption>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Navigation from "./Components/Navigation";
 
 export default function ErrorPage() {
   const [word, setWord] = useState("");
@@ -36,6 +37,7 @@ export default function ErrorPage() {
 
   return (
     <>
+      <Navigation />
       <main className="grid min-h-screen place-items-center bg-background px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
           <p className="text-base font-semibold text-text-600">ERR</p>
@@ -58,13 +60,13 @@ export default function ErrorPage() {
                 Go back
               </motion.button>
             </Link>
-            <a
-              href="https://github.com/gogglesgogs/"
+            <Link
+              to="https://github.com/gogglesinc/gogglesinc.github.io/issues/"
               target="_blank"
               className="text-sm font-semibold text-text-900"
             >
               Contact support <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </div>
       </main>
