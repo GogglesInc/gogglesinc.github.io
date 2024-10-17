@@ -8,7 +8,7 @@
 
 ### Useful resources
 
-[![Super-Linter](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/superlinter/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[Super-Linter](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/superlinter.yml/badge.svg)
 
 [Color palette](https://www.realtimecolors.com/?colors=ccd5ff-00020a-6b86ff-12268c-2749f1&fonts=Inter-Inter)
 
