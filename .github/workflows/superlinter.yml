@@ -6,6 +6,9 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+permissions:
+  statuses: write
+
 jobs:
   lint:
     runs-on: ubuntu-latest
