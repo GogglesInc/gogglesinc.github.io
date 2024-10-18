@@ -20,12 +20,11 @@ jobs:
       - name: Install Dependencies
         run: |
           npm ci
-          npm i eslint
-          npm i @microsoft/eslint-formatter-sarif
+          npm i eslint@9.9.0
+          npm i @microsoft/eslint-formatter-sarif@3.1.0
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
-          ESLINT_USE_FLAT_CONFIG: false
         run: npx eslint . --config eslint.config.js --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
         continue-on-error: true
       - name: Upload analysis results

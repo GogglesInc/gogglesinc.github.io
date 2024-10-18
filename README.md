@@ -13,7 +13,7 @@
 [Color palette](https://www.realtimecolors.com/?colors=ccd5ff-00020a-6b86ff-12268c-2749f1&fonts=Inter-Inter)
 
 ### Site structure
-
+<!-- markdownlint-disable MD033-->
 <details>
 <summary>Landing ("/")</summary>
 <pre>
@@ -146,5 +146,6 @@ Landing Page
   └── Footer
 </pre>
 </details>
+<!-- markdownlint-enable MD033 -->
 
 > © 2022 Goggles Inc. All rights reserved
