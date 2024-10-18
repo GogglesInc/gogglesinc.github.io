@@ -1,3 +1,7 @@
+<!-- markdownlint-disable -->
+[![Deploy](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/deploy.yml/badge.svg)](https://gogglesinc.github.io) [![Lighthouse CI](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/lighthouseci.yml/badge.svg)](https://github.com/GoogleChrome/lighthouse-ci) [![Super Linter](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/superlinter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter) [![ESLint](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/eslint.yml/badge.svg)](https://eslint.org)
+<!-- markdownlint-enable -->
+
 # Goggles Inc
 
 ## Empowering Businesses with Cutting-Edge Technology
@@ -5,8 +9,6 @@
 > Goggles Inc is a leading technology company dedicated to providing innovative and comprehensive solutions across a wide range of tech services. As a one-stop shop, we offer a seamless experience for individuals and businesses seeking cutting-edge technology solutions.
 
 [Link to homepage](https://gogglesinc.github.io)
-
-[![Super-Linter](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/superlinter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 [Color palette](https://www.realtimecolors.com/?colors=ccd5ff-00020a-6b86ff-12268c-2749f1&fonts=Inter-Inter)
 
