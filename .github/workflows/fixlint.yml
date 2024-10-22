@@ -1,5 +1,5 @@
 ---
-name: Fix Lint
+name: Lint & Fix Codebase
 
 on: # yamllint disable-line rule:truthy
   push: null
