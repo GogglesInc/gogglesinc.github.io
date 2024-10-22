@@ -126,8 +126,6 @@ const testimonials = [
 ];
 
 async function getProfilePicture() {
-  // Simulate API wait time
-  await new Promise((resolve) => setTimeout(resolve, 5000));
   return new Promise((resolve) => {
     fetch(`https://randomuser.me/api/?nat=us&results=${testimonials.length}`)
       .then((response) => response.json())

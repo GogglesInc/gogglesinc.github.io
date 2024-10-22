@@ -21,7 +21,7 @@ import {
   SquaresPlusIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 import ThemeButton from "./themeButton.jsx";
 import { Link } from "react-router-dom";
 
@@ -93,6 +93,7 @@ export default function Navigation() {
           )}
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <ThemeButton className="hidden lg:block" />
           <Link
             to="/about"
             className="text-base font-semibold leading-6 text-text-900"
@@ -105,18 +106,24 @@ export default function Navigation() {
           >
             Pricing
           </Link>
+          <Link
+            to="/blog"
+            className="text-base font-semibold leading-6 text-text-900"
+          >
+            Blog
+          </Link>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-base font-semibold leading-6 text-text-900">
+            <PopoverButton className="group relative text-base font-semibold leading-6 text-text-900">
               Product
-              <ChevronDownIcon
+              <ChevronRightIcon
                 aria-hidden="true"
-                className="h-5 w-5 flex-none text-text-700"
+                className="absolute -right-5 top-1/2 h-5 w-5 -translate-y-1/2 text-text-700 transition-transform group-data-[open]:rotate-90"
               />
             </PopoverButton>
 
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-background shadow-lg ring-1 ring-background-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute -right-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-background shadow-lg ring-1 ring-background-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
                 {products.map((item) => (
@@ -146,21 +153,12 @@ export default function Navigation() {
             </PopoverPanel>
           </Popover>
           <Link
-            to="/blog"
-            className="text-base font-semibold leading-6 text-text-900"
-          >
-            Blog
-          </Link>
-        </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <ThemeButton />
-          <Link
             to="/login"
-            className="text-base font-semibold leading-6 text-text-900"
+            className="hidden gap-1 text-base font-semibold leading-6 text-text-900 lg:flex"
           >
             Log in <span aria-hidden="true">&rarr;</span>
           </Link>
-        </div>
+        </PopoverGroup>
       </nav>
       <Dialog
         open={mobileMenuOpen}
@@ -208,7 +206,7 @@ export default function Navigation() {
                     Product
                     <ChevronDownIcon
                       aria-hidden="true"
-                      className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                      className="h-5 w-5 flex-none transition-transform group-data-[open]:rotate-180"
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
@@ -233,11 +231,11 @@ export default function Navigation() {
               <div className="py-6">
                 <Link
                   to="/login"
-                  className="-mx-3 mb-4 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-text-900 hover:bg-background-50"
                 >
                   Log in
                 </Link>
-                <ThemeButton />
+                <ThemeButton className="mt-4" />
               </div>
             </div>
           </div>

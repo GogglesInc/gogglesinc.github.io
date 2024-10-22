@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
+import cn from "../../utilities/cn";
+import PropTypes from "prop-types";
 
-const ThemeButton = () => {
+export default function ThemeButton({ className }) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -29,14 +31,20 @@ const ThemeButton = () => {
   };
 
   return (
-    <button onClick={toggleTheme} aria-label="Toggle theme">
+    <button
+      onClick={toggleTheme}
+      aria-label="Toggle theme"
+      className={cn("size-6", className)}
+    >
       {theme === "light" ? (
-        <SunIcon className="mr-5 size-6 fill-text" />
+        <SunIcon className="size-full fill-text" />
       ) : (
-        <MoonIcon className="mr-5 size-6 fill-text" />
+        <MoonIcon className="size-full fill-text" />
       )}
     </button>
   );
-};
+}
 
-export default ThemeButton;
+ThemeButton.propTypes = {
+  className: PropTypes.string,
+};
