@@ -2,5 +2,5 @@
  * @type {import("prettier").Config}
  */
 export default {
-  plugins: ["prettier-plugin-tailwindcss"],
+  plugins: [await import("prettier-plugin-tailwindcss")],
 };
