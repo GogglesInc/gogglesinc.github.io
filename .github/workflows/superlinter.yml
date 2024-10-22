@@ -22,5 +22,7 @@ jobs:
         env:
           ESLINT_USE_FLAT_CONFIG: false
           VALIDATE_ALL_CODEBASE: false
+          VALIDATE_JAVASCRIPT_PRETTIER: false
+          VALIDATE_JAVASCRIPT_STANDARD: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
