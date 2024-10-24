@@ -47,9 +47,9 @@ jobs:
           title: "chore: fix linting issues"
           committer: lint[bot] <lint[bot]@users.noreply.github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-      - name: Check outputs
-        if: ${{ steps.cpr.outputs.pull-request-number }}
+      - name: Outputs
+        if: ${{ steps.pushfix.outputs.pull-request-number }}
         run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
-          echo "Pull Request Branch - ${{ steps.cpr.outputs.pull-request-branch }}"
+          echo "Pull Request Number - ${{ steps.pushfix.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.pushfix.outputs.pull-request-url }}"
+          echo "Pull Request Branch - ${{ steps.pushfix.outputs.pull-request-branch }}"
