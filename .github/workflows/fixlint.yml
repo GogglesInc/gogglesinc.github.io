@@ -9,30 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Lint Code Base
-        uses: github/super-linter@v7
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ESLINT_USE_FLAT_CONFIG: false
-          VALIDATE_JAVASCRIPT_PRETTIER: false
-          VALIDATE_CSS_PRETTIER: false
-          VALIDATE_HTML_PRETTIER: false
-          VALIDATE_JSON_PRETTIER: false
-          VALIDATE_JSONC_PRETTIER: false
-          VALIDATE_JSX_PRETTIER: false
-          VALIDATE_MARKDOWN_PRETTIER: false
-          VALIDATE_TYPESCRIPT_PRETTIER: false
-          VALIDATE_YAML_PRETTIER: false
-          DEFAULT_BRANCH: main
-
-  fix-lint-issues:
+  fix-lint:
     permissions:
       contents: write
       statuses: write
@@ -45,13 +22,21 @@ jobs:
         uses: super-linter/super-linter@v7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ESLINT_USE_FLAT_CONFIG: false
+          VALIDATE_JAVASCRIPT_PRETTIER: false
+          VALIDATE_CSS_PRETTIER: false
+          VALIDATE_CSS: false
+          VALIDATE_HTML_PRETTIER: false
+          VALIDATE_JSON_PRETTIER: false
+          VALIDATE_JSX_PRETTIER: false
+          VALIDATE_MARKDOWN_PRETTIER: false
+          VALIDATE_TYPESCRIPT_PRETTIER: false
+          VALIDATE_YAML_PRETTIER: false
           FIX_JAVASCRIPT_ES: true
           FIX_JAVASCRIPT_STANDARD: true
           FIX_JSON: true
           FIX_JSX: true
           FIX_MARKDOWN: true
-          FIX_TYPESCRIPT_ES: true
-          FIX_TYPESCRIPT_STANDARD: true
       - name: Commit and push linting fixes
         if: >
           github.event_name == 'pull_request' &&
@@ -61,4 +46,5 @@ jobs:
           branch: ${{ github.event.pull_request.head.ref || github.head_ref || github.ref }}
           commit_message: "chore: fix linting issues"
           commit_user_name: lint[bot]
-          commit_user_email: lint-bot@gogglesinc.github.io
+          commit_user_email: lint[bot]@users.noreply.github.com
+          commit_author: lint[bot] <lint[bot]@users.noreply.github.com>
