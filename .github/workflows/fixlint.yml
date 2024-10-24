@@ -29,15 +29,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ESLINT_USE_FLAT_CONFIG: false
-          VALIDATE_JAVASCRIPT_PRETTIER: false
-          VALIDATE_CSS_PRETTIER: false
           VALIDATE_CSS: false
-          VALIDATE_HTML_PRETTIER: false
-          VALIDATE_JSON_PRETTIER: false
-          VALIDATE_JSX_PRETTIER: false
-          VALIDATE_MARKDOWN_PRETTIER: false
-          VALIDATE_TYPESCRIPT_PRETTIER: false
-          VALIDATE_YAML_PRETTIER: false
           FIX_JAVASCRIPT_ES: true
           FIX_JAVASCRIPT_STANDARD: true
           FIX_JSON: true
@@ -45,7 +37,7 @@ jobs:
           FIX_MARKDOWN: true
       - name: Commit and push linting fixes
         if: >
-          github.event_name == 'pull_request' &&
+          github.event_name == 'push' &&
           github.ref_name != github.event.repository.default_branch
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
