@@ -1,7 +1,9 @@
 <!-- markdownlint-disable -->
-![Version](https://img.shields.io/github/package-json/v/gogglesinc/gogglesinc.github.io?style=flat&logo=github&label=Version&labelColor=%2324292E) [![Site status](https://img.shields.io/uptimerobot/status/m793324277-db804375fd8e8ba93504891a?up_message=Operational&up_color=green&down_message=Out%20of%20order&down_color=red&style=flat&label=gogglesinc.github.io&labelColor=%2324292E&color=%2334D058&link=https%3A%2F%2Fgogglesinc.github.io)](https://gogglesinc.github.io) ![GitHub stars](https://img.shields.io/github/stars/gogglesinc/gogglesinc.github.io?style=flat&logo=github&label=Stars&labelColor=%2324292E) ![GitHub watchers](https://img.shields.io/github/watchers/gogglesinc/gogglesinc.github.io?style=flat&logo=github&label=Watchers&labelColor=%2324292E)
 
-[![Deploy](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/deploy.yml/badge.svg)](https://gogglesinc.github.io) [![Lighthouse CI](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/lighthouseci.yml/badge.svg)](https://github.com/GoogleChrome/lighthouse-ci) [![Super Linter](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/superlinter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter) [![ESLint](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/eslint.yml/badge.svg)](https://eslint.org)
+![Version](https://img.shields.io/github/package-json/v/gogglesinc/gogglesinc.github.io?style=flat&logo=github&label=Version&labelColor=%2324292E) ![GitHub stars](https://img.shields.io/github/stars/gogglesinc/gogglesinc.github.io?style=flat&logo=github&label=Stars&labelColor=%2324292E) ![GitHub watchers](https://img.shields.io/github/watchers/gogglesinc/gogglesinc.github.io?style=flat&logo=github&label=Watchers&labelColor=%2324292E)
+
+[![Deploy](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/deploy.yml/badge.svg)](https://gogglesinc.github.io) [![ESLint](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/eslint.yml/badge.svg)](https://eslint.org)
+
 <!-- markdownlint-enable -->
 
 # Goggles Inc
@@ -15,6 +17,7 @@
 [Color palette](https://www.realtimecolors.com/?colors=ccd5ff-00020a-6b86ff-12268c-2749f1&fonts=Inter-Inter)
 
 ### Site structure
+
 <!-- markdownlint-disable MD033-->
 <details>
 <summary>Landing ("/")</summary>
