@@ -1,12 +1,9 @@
-import { defineConfig, splitVendorChunkPlugin } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
-  plugins: [
-    react(),
-    splitVendorChunkPlugin()
-  ],
+  plugins: [react()],
   build: {
     rollupOptions: {
       output: {
@@ -18,6 +15,9 @@ export default defineConfig({
           icons: "@heroicons/react",
           animation: "framer-motion",
         },
+        compact: true,
+        banner: '/* This source code is licensed under the MIT License. For more information, please refer to https://github.com/GogglesInc/gogglesinc.github.io/blob/main/LICENSE. */', 		
+        footer: '/* This source code is licensed under the MIT License. For more information, please refer to https://github.com/GogglesInc/gogglesinc.github.io/blob/main/LICENSE. */'
       },
     },
   },
