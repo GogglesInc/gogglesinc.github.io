@@ -42,6 +42,7 @@ jobs:
         id: pushfix
         uses: peter-evans/create-pull-request@v7
         with:
+          token: ${{ secrets.PAT_PULL_REQUEST }}
           branch: chore/linting-fixes
           commit-message: "chore: fix linting issues"
           title: "chore: fix linting issues"

@@ -8,16 +8,17 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          "react-core": ["react", "react-dom", "react-router-dom"],
-          "react-libs": ["@tanstack/react-query", "prop-types"],
+          "react-core": ["react", "react-dom"],
+          "react-libs": [
+            "react-router-dom",
+            "@tanstack/react-query",
+            "prop-types",
+          ],
           tailwind: ["tailwind-merge", "clsx"],
-          ui: ["@headlessui/react"],
-          icons: ["@heroicons/react"],
+          ui: ["@headlessui/react", "@heroicons/react"],
           animation: ["framer-motion"],
         },
         compact: true,
-        banner: '/* This source code is licensed under the MIT License. For more information, please refer to https://github.com/GogglesInc/gogglesinc.github.io/blob/main/LICENSE. */', 		
-        footer: '/* This source code is licensed under the MIT License. For more information, please refer to https://github.com/GogglesInc/gogglesinc.github.io/blob/main/LICENSE. */'
       },
     },
   },

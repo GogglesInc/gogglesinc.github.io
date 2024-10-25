@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
-import cn from "../../utilities/cn";
+import cn from "../utilities/cn";
 import PropTypes from "prop-types";
 
 export default function ThemeButton({ className }) {
