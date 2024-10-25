@@ -4,7 +4,17 @@ import react from "@vitejs/plugin-react";
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
   plugins: [react()],
-  build: {},
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks​: {
+          core: ["react", "react-dom", "react-router-dom", "@tanstack/react-query", "prop-types"],
+          tailwind: ["tailwind-merge", "clsx"],
+          ui: ["@headlessui/react", "@heroicons/react", "framer-motion"],
+        },
+      },
+    },
+  },
   server: {
     port: 8000,
   },
