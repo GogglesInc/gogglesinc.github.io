@@ -191,7 +191,7 @@ export default function Footer() {
               </svg>
             </Link>
           </div>
-          <p className="mt-8 text-xs leading-5 text-text-500 md:order-1 md:mt-0">
+          <p className="mt-8 text-xs leading-5 text-text-600 md:order-1 md:mt-0">
             © 2022 Goggles Inc. All rights reserved.
           </p>
         </div>

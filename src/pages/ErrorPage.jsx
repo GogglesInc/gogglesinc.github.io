@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Navigation from "./Components/Navigation";
+import Navigation from "../Components/Navigation";
+
+const wordList = ["got lost!", "what?", "why?", "how?", "uhhh", "huh?"];
 
 export default function ErrorPage() {
   const [word, setWord] = useState("");
-  const wordList = ["got lost!", "what?", "why?", "how?", "uhhh", "huh?"];
 
   useEffect(() => {
     if (!localStorage.getItem("theme")) {
@@ -30,9 +31,9 @@ export default function ErrorPage() {
 
     getRandomWord();
 
-    const intervalId = setInterval(getRandomWord, 5000);
+    const interval = setInterval(getRandomWord, 5000);
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(interval);
   });
 
   return (
