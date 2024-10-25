@@ -1,16 +1,22 @@
-import { defineConfig } from "vite";
+import { defineConfig, splitVendorChunkPlugin } from "vite";
 import react from "@vitejs/plugin-react";
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    splitVendorChunkPlugin()
+  ],
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
-          core: ["react", "react-dom", "react-router-dom", "@tanstack/react-query", "prop-types"],
+          "react-core": ["react", "react-dom", "react-router-dom"],
+          "react-libs": ["@tanstack/react-query", "prop-types"],
           tailwind: ["tailwind-merge", "clsx"],
-          ui: ["@headlessui/react", "@heroicons/react", "framer-motion"],
+          ui: "@headlessui/react",
+          icons: "@heroicons/react",
+          animation: "framer-motion",
         },
       },
     },
