@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/github/package-json/v/gogglesinc/gogglesinc.github.io?style=flat&logo=github&label=Version&labelColor=%2324292E) ![GitHub stars](https://img.shields.io/github/stars/gogglesinc/gogglesinc.github.io?style=flat&logo=github&label=Stars&labelColor=%2324292E) ![GitHub watchers](https://img.shields.io/github/watchers/gogglesinc/gogglesinc.github.io?style=flat&logo=github&label=Watchers&labelColor=%2324292E)
 
-[![Deploy](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/deploy.yml/badge.svg)](https://gogglesinc.github.io) [![ESLint](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/eslint.yml/badge.svg)](https://eslint.org)
+[![Deploy](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/deploy.yml/badge.svg)](https://gogglesinc.github.io) [![ESLint](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/eslint.yml/badge.svg)](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/eslint.yml) [![Lint & Fix Codebase](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/lint.yml/badge.svg)](https://github.com/gogglesinc/gogglesinc.github.io/actions/workflows/lint.yml)
 
 <!-- markdownlint-enable -->
 
