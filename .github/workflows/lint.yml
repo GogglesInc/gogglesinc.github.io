@@ -43,11 +43,13 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.PAT_PULL_REQUEST }}
-          branch: chore/linting-fixes
-          commit-message: "chore: fix linting issues"
-          title: "chore: fix linting issues"
+          branch: chore/lint
+          commit-message: "chore: lint"
+          title: "chore: lint"
+          body: "Automated linting action"
           committer: lint[bot] <lint[bot]@users.noreply.github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          labels: chore
       - name: Outputs
         if: ${{ steps.pushfix.outputs.pull-request-number }}
         run: |
