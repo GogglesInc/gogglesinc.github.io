@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Navigation from "../Components/Navigation";
+import ThemeButton from "../Components/themeButton";
 
 const wordList = ["got lost!", "what?", "why?", "how?", "uhhh", "huh?"];
 
@@ -9,19 +9,6 @@ export default function ErrorPage() {
   const [word, setWord] = useState("");
 
   useEffect(() => {
-    if (!localStorage.getItem("theme")) {
-      let systemTheme =
-        (window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: light)").matches) === true
-          ? "light"
-          : "dark";
-      document.documentElement.dataset.theme = systemTheme;
-      localStorage.setItem("theme", systemTheme);
-    } else {
-      let savedTheme = localStorage.getItem("theme");
-      document.documentElement.dataset.theme = savedTheme;
-    }
-
     document.title = "Error! - Goggles Inc.";
 
     const getRandomWord = () => {
@@ -38,7 +25,6 @@ export default function ErrorPage() {
 
   return (
     <>
-      <Navigation />
       <main className="grid min-h-screen place-items-center bg-background px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
           <p className="text-base font-semibold text-text-600">ERR</p>
@@ -70,6 +56,7 @@ export default function ErrorPage() {
             </Link>
           </div>
         </div>
+        <ThemeButton className="hidden" />
       </main>
     </>
   );
