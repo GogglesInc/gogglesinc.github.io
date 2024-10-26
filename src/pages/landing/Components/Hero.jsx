@@ -22,7 +22,7 @@ export default function Hero() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-text ring-1 ring-accent-900/10 hover:ring-accent-900/20">
               Announcing our next round of funding.{" "}
-              <Link to="/" className="font-semibold text-text-600">
+              <Link to="/blog" className="font-semibold text-text-600">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Read more <span aria-hidden="true">&rarr;</span>
               </Link>

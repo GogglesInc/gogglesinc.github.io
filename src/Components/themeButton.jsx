@@ -4,30 +4,39 @@ import cn from "../utilities/cn";
 import PropTypes from "prop-types";
 
 export default function ThemeButton({ className }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) return savedTheme;
+    const systemTheme = window.matchMedia("(prefers-color-scheme: light)")
+      .matches
+      ? "light"
+      : "dark";
+    localStorage.setItem("theme", systemTheme);
+    return systemTheme;
+  });
 
   useEffect(() => {
-    if (!localStorage.getItem("theme")) {
-      let systemTheme =
-        (window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: light)").matches) === true
-          ? "light"
-          : "dark";
-      setTheme(systemTheme);
-      document.documentElement.dataset.theme = systemTheme;
-      localStorage.setItem("theme", systemTheme);
-    } else {
-      let savedTheme = localStorage.getItem("theme");
-      setTheme(savedTheme);
-      document.documentElement.dataset.theme = savedTheme;
-    }
-  }, []);
+    document.documentElement.dataset.theme = theme;
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
+
+    const handleThemeChange = () => {
+      const newTheme = mediaQuery.matches ? "light" : "dark";
+      localStorage.setItem("theme", newTheme);
+      setTheme(newTheme);
+    };
+
+    mediaQuery.addEventListener("change", handleThemeChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleThemeChange);
+    };
+  }, [theme]);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.dataset.theme = newTheme;
     localStorage.setItem("theme", newTheme);
+    setTheme(newTheme);
   };
 
   return (
