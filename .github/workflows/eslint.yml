@@ -16,7 +16,7 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Dependencies
         run: |
