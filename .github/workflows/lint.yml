@@ -31,6 +31,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ESLINT_USE_FLAT_CONFIG: false
           VALIDATE_CSS: false
+          VALIDATE_TYPESCRIPT_STANDARD: false
+          VALIDATE_TYPESCRIPT_PRETTIER: false
+          VALIDATE_TYPESCRIPT_ES: false
           FIX_JAVASCRIPT_PRETTIER: true
           FIX_JAVASCRIPT_ES: true
           FIX_JAVASCRIPT_STANDARD: true

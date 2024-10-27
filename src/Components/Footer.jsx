@@ -159,7 +159,6 @@ export default function Footer() {
             />
             <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
               <motion.button
-                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
                 className="flex w-full items-center justify-center rounded-md bg-background-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-background-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-background-600"
