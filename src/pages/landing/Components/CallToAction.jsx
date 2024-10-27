@@ -18,7 +18,6 @@ export default function CTA() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link to={"/pricing"}>
               <motion.button
-                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={
                   "mx-auto w-fit rounded-md bg-text-50 px-3.5 py-2.5 text-sm font-semibold text-accent-600 shadow-sm hover:bg-text-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-background-500 active:bg-text-200"

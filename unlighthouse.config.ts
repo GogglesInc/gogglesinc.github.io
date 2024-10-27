@@ -1,5 +1,5 @@
 export default {
-  site: "http://localhost:8000/",
+  site: "http://gogglesinc.github.io",
   ci: {
     budget: 85,
     buildStatic: true,

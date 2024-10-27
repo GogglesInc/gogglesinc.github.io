@@ -219,7 +219,6 @@ export default function Testimonials() {
           </div>
         </div>
         <motion.button
-          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setVisible(!isVisible)}
           className={

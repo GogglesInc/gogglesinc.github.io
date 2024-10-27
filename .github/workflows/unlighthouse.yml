@@ -2,7 +2,14 @@
 name: Unlighthouse CI
 
 on: #yamllint disable-line rule:truthy
+  workflow_run:
+    workflows: ["Deploy"]
+    types:
+      - completed
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   unlighthouse:
