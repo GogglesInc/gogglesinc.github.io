@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
@@ -8,21 +8,24 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-core': ['react', 'react-dom'],
-          'react-libs': [
-            'react-router-dom',
-            '@tanstack/react-query',
-            'prop-types'
+          "react-core": ["react", "react-dom"],
+          "react-libs": [
+            "react-router-dom",
+            "@tanstack/react-query",
+            "prop-types",
           ],
-          tailwind: ['tailwind-merge', 'clsx'],
-          ui: ['@headlessui/react', '@heroicons/react'],
-          animation: ['framer-motion']
+          tailwind: ["tailwind-merge", "clsx"],
+          ui: ["@headlessui/react", "@heroicons/react"],
+          animation: ["framer-motion"],
         },
-        compact: true
-      }
-    }
+        compact: true,
+      },
+    },
   },
   server: {
-    port: 8000
-  }
-})
+    port: 8000,
+  },
+  preview: {
+    port: 8000,
+  },
+});
